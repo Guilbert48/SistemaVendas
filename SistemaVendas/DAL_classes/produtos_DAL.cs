@@ -185,7 +185,6 @@ namespace SistemaVendas.DAL_classes
         {
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
-
             try
             {
                 string sql =
