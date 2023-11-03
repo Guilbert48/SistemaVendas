@@ -183,7 +183,6 @@ namespace SistemaVendas.DAL_classes
         #region Pesquisas na base de dados
         public DataTable Source(string keyWords)
         {
-
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
 
