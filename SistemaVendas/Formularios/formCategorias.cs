@@ -157,9 +157,9 @@ namespace SistemaVendas.Formularios
             if (usersGrid.SelectedCells.Count > 0)
             {
                 if (e.KeyCode == Keys.Escape)
-                {
-                    limpar();
+                {            
                     usersGrid.ClearSelection();
+                    limpar();
                 }
             }
         }
