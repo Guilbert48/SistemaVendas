@@ -40,15 +40,15 @@
             this.textBoxPesquisarFunc = new System.Windows.Forms.TextBox();
             this.usersGrid = new System.Windows.Forms.DataGridView();
             this.txtId = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
             this.textBoxDesc = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.Label();
-            this.textBoxNomeCat = new System.Windows.Forms.TextBox();
             this.txtNomeUsusario = new System.Windows.Forms.Label();
             this.comboBoxCategorias = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxQtde = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBoxNomeCat = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersGrid)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1183, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1201, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +68,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(508, 9);
+            this.label1.Location = new System.Drawing.Point(547, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 43);
             this.label1.TabIndex = 48;
@@ -183,15 +183,6 @@
             this.txtId.TabIndex = 41;
             this.txtId.Text = "Produto cód";
             // 
-            // textBoxID
-            // 
-            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(158, 70);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(211, 26);
-            this.textBoxID.TabIndex = 40;
-            // 
             // textBoxDesc
             // 
             this.textBoxDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -211,15 +202,6 @@
             this.txtLogin.Size = new System.Drawing.Size(103, 28);
             this.txtLogin.TabIndex = 38;
             this.txtLogin.Text = "Descrição";
-            // 
-            // textBoxNomeCat
-            // 
-            this.textBoxNomeCat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNomeCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeCat.Location = new System.Drawing.Point(158, 125);
-            this.textBoxNomeCat.Name = "textBoxNomeCat";
-            this.textBoxNomeCat.Size = new System.Drawing.Size(272, 26);
-            this.textBoxNomeCat.TabIndex = 37;
             // 
             // txtNomeUsusario
             // 
@@ -277,6 +259,24 @@
             this.label3.TabIndex = 53;
             this.label3.Text = "Quantidade";
             // 
+            // textBoxNomeCat
+            // 
+            this.textBoxNomeCat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxNomeCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNomeCat.Location = new System.Drawing.Point(158, 125);
+            this.textBoxNomeCat.Name = "textBoxNomeCat";
+            this.textBoxNomeCat.Size = new System.Drawing.Size(272, 26);
+            this.textBoxNomeCat.TabIndex = 37;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(158, 70);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(211, 26);
+            this.textBoxID.TabIndex = 40;
+            // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,14 +326,14 @@
         private System.Windows.Forms.TextBox textBoxPesquisarFunc;
         private System.Windows.Forms.DataGridView usersGrid;
         private System.Windows.Forms.Label txtId;
-        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.TextBox textBoxDesc;
         private System.Windows.Forms.Label txtLogin;
-        private System.Windows.Forms.TextBox textBoxNomeCat;
         private System.Windows.Forms.Label txtNomeUsusario;
         private System.Windows.Forms.ComboBox comboBoxCategorias;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxQtde;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxNomeCat;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }

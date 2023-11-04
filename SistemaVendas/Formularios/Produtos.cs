@@ -76,6 +76,7 @@ namespace SistemaVendas.Formularios
             DataTable dt = dal.Select();
             usersGrid.DataSource = dt;
             usersGrid.ClearSelection();
+            textBoxID.Enabled = true;
         }
 
         private void textBoxQtde_KeyPress(object sender, KeyPressEventArgs e)
@@ -123,11 +124,17 @@ namespace SistemaVendas.Formularios
                 usersGrid.DataSource = dt;
             }
         }
-
+        categorias_DAL dalCat = new categorias_DAL();
         private void Produtos_Load(object sender, EventArgs e)
         {
             DataTable dt = dal.Select();
             usersGrid.DataSource = dt;
+            DataTable categoriasDT = dalCat.Select();
+            comboBoxCategorias.DataSource = categoriasDT;
+            comboBoxCategorias.DisplayMember = "Nome";
+            comboBoxCategorias.ValueMember = "Nome";
+            comboBoxCategorias.SelectedIndex = -1;
+            
         }
 
         private void usersGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -169,6 +176,7 @@ namespace SistemaVendas.Formularios
             DataTable dt = dal.Select();
             usersGrid.DataSource = dt;
             usersGrid.ClearSelection();
+            textBoxID.Enabled = true;
         }
 
         private void btnAtualizar_Click_1(object sender, EventArgs e)
@@ -205,6 +213,7 @@ namespace SistemaVendas.Formularios
             DataTable dt = dal.Select();
             usersGrid.DataSource = dt;
             usersGrid.ClearSelection();
+            textBoxID.Enabled = true;
 
         }
 
