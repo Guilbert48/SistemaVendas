@@ -70,7 +70,7 @@
             this.usersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.usersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.usersGrid.Location = new System.Drawing.Point(174, 414);
+            this.usersGrid.Location = new System.Drawing.Point(174, 396);
             this.usersGrid.MultiSelect = false;
             this.usersGrid.Name = "usersGrid";
             this.usersGrid.ReadOnly = true;
