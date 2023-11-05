@@ -55,10 +55,12 @@
     <Compile Include="BLL_classes\Login_BLL.cs" />
     <Compile Include="BLL_classes\produtos_BLL.cs" />
     <Compile Include="BLL_classes\userBLL_class.cs" />
+    <Compile Include="BLL_classes\Vendas_BLL.cs" />
     <Compile Include="DAL_classes\categorias_DAL.cs" />
     <Compile Include="DAL_classes\Login_DAL.cs" />
     <Compile Include="DAL_classes\produtos_DAL.cs" />
     <Compile Include="DAL_classes\userDAL_class.cs" />
+    <Compile Include="DAL_classes\Vendas_DAL.cs" />
     <Compile Include="Formularios\formAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
