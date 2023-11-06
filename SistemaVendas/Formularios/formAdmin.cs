@@ -42,5 +42,11 @@ namespace SistemaVendas
             Produtos produtos = new Produtos(); 
             produtos.ShowDialog();  
         }
+
+        private void transaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Vender vender = new Vender();
+            vender.ShowDialog();
+        }
     }
 }

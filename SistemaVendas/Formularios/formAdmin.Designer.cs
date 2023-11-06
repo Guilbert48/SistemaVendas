@@ -108,6 +108,7 @@
             this.transaçõesToolStripMenuItem.Name = "transaçõesToolStripMenuItem";
             this.transaçõesToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.transaçõesToolStripMenuItem.Text = "Transações ";
+            this.transaçõesToolStripMenuItem.Click += new System.EventHandler(this.transaçõesToolStripMenuItem_Click);
             // 
             // txtUserLogado
             // 
