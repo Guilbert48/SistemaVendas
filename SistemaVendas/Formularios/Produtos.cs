@@ -21,7 +21,7 @@ namespace SistemaVendas.Formularios
         produtos_BLL p = new produtos_BLL();
         produtos_DAL dal = new produtos_DAL();
         Login login = new Login();
-
+        
         public void limpar()
         {
             textBoxID.Clear();
@@ -134,6 +134,9 @@ namespace SistemaVendas.Formularios
             comboBoxCategorias.DisplayMember = "Nome";
             comboBoxCategorias.ValueMember = "Nome";
             comboBoxCategorias.SelectedIndex = -1;
+            textBoxID.TabIndex = 1;
+            textBoxID.Focus();
+            
             
         }
 
@@ -240,6 +243,17 @@ namespace SistemaVendas.Formularios
             }
         }
 
+        private void textBoxID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
 
+            if (e.KeyChar == '.' && (sender as TextBox).Text.Contains('.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
