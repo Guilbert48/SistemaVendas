@@ -28,6 +28,9 @@ namespace SistemaVendas.Formularios
             this.Close();
         }
 
-        
+        private void Vender_Load(object sender, EventArgs e)
+        {
+           textBoxQtd.Focus();
+        }
     }
 }

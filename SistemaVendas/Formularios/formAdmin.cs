@@ -46,7 +46,7 @@ namespace SistemaVendas
         private void transaçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Vender vender = new Vender();
-            vender.ShowDialog();
+            vender.ShowDialog();            
         }
     }
 }
