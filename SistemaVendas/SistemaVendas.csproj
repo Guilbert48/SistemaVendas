@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL_classes\categorias_BLL.cs" />
+    <Compile Include="BLL_classes\Detalhes_transacao_BLL.cs" />
     <Compile Include="BLL_classes\Login_BLL.cs" />
     <Compile Include="BLL_classes\produtos_BLL.cs" />
     <Compile Include="BLL_classes\userBLL_class.cs" />

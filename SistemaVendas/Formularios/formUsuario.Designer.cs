@@ -32,10 +32,7 @@
             this.comprarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlFooter = new System.Windows.Forms.Panel();
-            this.txtFooter = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -68,33 +65,12 @@
             this.inventárioToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.inventárioToolStripMenuItem.Text = "Inventário";
             // 
-            // pnlFooter
-            // 
-            this.pnlFooter.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pnlFooter.Controls.Add(this.txtFooter);
-            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 976);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1904, 65);
-            this.pnlFooter.TabIndex = 1;
-            // 
-            // txtFooter
-            // 
-            this.txtFooter.AutoSize = true;
-            this.txtFooter.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFooter.Location = new System.Drawing.Point(630, 14);
-            this.txtFooter.Name = "txtFooter";
-            this.txtFooter.Size = new System.Drawing.Size(732, 36);
-            this.txtFooter.TabIndex = 1;
-            this.txtFooter.Text = "Desenvolvido por Guilbert Silva | All rights reserveds";
-            // 
             // formUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
@@ -106,8 +82,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formUsuario_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.pnlFooter.ResumeLayout(false);
-            this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,7 +93,5 @@
         private System.Windows.Forms.ToolStripMenuItem comprarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventárioToolStripMenuItem;
-        private System.Windows.Forms.Panel pnlFooter;
-        private System.Windows.Forms.Label txtFooter;
     }
 }

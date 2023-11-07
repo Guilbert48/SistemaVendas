@@ -48,5 +48,14 @@ namespace SistemaVendas
             Vender vender = new Vender();
             vender.ShowDialog();            
         }
+
+        private void formAdmin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F2)
+            {
+                Vender v = new Vender();    
+                v.ShowDialog();
+            }
+        }
     }
 }

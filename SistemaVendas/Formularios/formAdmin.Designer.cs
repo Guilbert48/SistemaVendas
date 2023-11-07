@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlFooter = new System.Windows.Forms.Panel();
-            this.txtFooter = new System.Windows.Forms.Label();
             this.menuStripTop = new System.Windows.Forms.MenuStrip();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,29 +36,8 @@
             this.transaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUserLogado = new System.Windows.Forms.Label();
             this.bemVindoTxt = new System.Windows.Forms.Label();
-            this.pnlFooter.SuspendLayout();
             this.menuStripTop.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlFooter
-            // 
-            this.pnlFooter.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pnlFooter.Controls.Add(this.txtFooter);
-            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 756);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1826, 65);
-            this.pnlFooter.TabIndex = 0;
-            // 
-            // txtFooter
-            // 
-            this.txtFooter.AutoSize = true;
-            this.txtFooter.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFooter.Location = new System.Drawing.Point(630, 14);
-            this.txtFooter.Name = "txtFooter";
-            this.txtFooter.Size = new System.Drawing.Size(732, 36);
-            this.txtFooter.TabIndex = 1;
-            this.txtFooter.Text = "Desenvolvido por Guilbert Silva | All rights reserveds";
             // 
             // menuStripTop
             // 
@@ -140,7 +117,6 @@
             this.ClientSize = new System.Drawing.Size(1826, 821);
             this.Controls.Add(this.bemVindoTxt);
             this.Controls.Add(this.txtUserLogado);
-            this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.menuStripTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStripTop;
@@ -150,8 +126,7 @@
             this.Text = "Painel Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formAdmin_FormClosed);
-            this.pnlFooter.ResumeLayout(false);
-            this.pnlFooter.PerformLayout();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.formAdmin_KeyDown);
             this.menuStripTop.ResumeLayout(false);
             this.menuStripTop.PerformLayout();
             this.ResumeLayout(false);
@@ -160,9 +135,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlFooter;
-        private System.Windows.Forms.Label txtFooter;
         private System.Windows.Forms.MenuStrip menuStripTop;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
