@@ -55,8 +55,8 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    "INSERT into tabela_produtos(id, nome, categoria, descricao, qtde, data_cadastro, add_for)" +
-                    $"values(@id, @nome, @categoria, @descricao, @qtde, @data_cadastro, @add_for)";
+                    "INSERT into tabela_produtos(id, nome, categoria, descricao, qtde, data_cadastro, add_for, preco)" +
+                    $"values(@id, @nome, @categoria, @descricao, @qtde, @data_cadastro, @add_for, @preco)";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@id", p.id);
@@ -66,6 +66,7 @@ namespace SistemaVendas.DAL_classes
                 cmd.Parameters.AddWithValue("@qtde", p.qtde);
                 cmd.Parameters.AddWithValue("@data_cadastro", p.data_cadastro);
                 cmd.Parameters.AddWithValue("@add_for", p.add_for);
+                cmd.Parameters.AddWithValue("@preco", p.preco);
 
                 con.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -104,7 +105,7 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    "UPDATE tabela_produtos SET nome=@nome, categoria=@categoria, descricao=@descricao, qtde=@qtde, atualizado_por=@modified_for, data_att=@data_att where id=@id";
+                    "UPDATE tabela_produtos SET nome=@nome, categoria=@categoria, descricao=@descricao, qtde=@qtde, atualizado_por=@modified_for, data_att=@data_att, preco=@preco where id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@nome", p.nome);
@@ -114,6 +115,9 @@ namespace SistemaVendas.DAL_classes
                 cmd.Parameters.AddWithValue("@data_att", p.data_atualizacao);
                 cmd.Parameters.AddWithValue("@modified_for", p.modified_for);
                 cmd.Parameters.AddWithValue("@id", p.id);
+                cmd.Parameters.AddWithValue("@preco", p.preco);
+
+
 
                 con.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -189,6 +193,36 @@ namespace SistemaVendas.DAL_classes
             {
                 string sql =
                     $"select * from tabela_produtos where id LIKE '%{keyWords}%'" +
+                    $"or nome LIKE '%{keyWords}%'";
+
+                SqlCommand cmd = new SqlCommand(sql, con);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+                con.Open();
+                adapter.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}", "ERRO");
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return dt;
+
+        }
+        public DataTable PegarProdutoVenda(string keyWords)
+        {
+            SqlConnection con = new SqlConnection(connString);
+            DataTable dt = new DataTable();
+            try
+            {
+                string sql =
+                    $"select nome from tabela_produtos where id LIKE '%{keyWords}%'" +
                     $"or nome LIKE '%{keyWords}%'";
 
                 SqlCommand cmd = new SqlCommand(sql, con);

@@ -48,9 +48,12 @@ namespace SistemaVendas.Formularios
             p.categoria = comboBoxCategorias.Text;
             p.descricao = textBoxDesc.Text;
             p.data_cadastro = DateTime.Now;
-            if (textBoxQtde.Text != "") 
+
+            if (textBoxQtde.Text != "" && textBoxValorUni.Text != "") 
             {
                 p.qtde = decimal.Parse(textBoxQtde.Text);
+                p.preco = decimal.Parse(textBoxValorUni.Text);
+
             };
             
             int logado_sistema = login.IdLogado();
@@ -151,6 +154,9 @@ namespace SistemaVendas.Formularios
                 comboBoxCategorias.Text = usersGrid.Rows[rowIndex].Cells[2].Value.ToString();
                 textBoxDesc.Text = usersGrid.Rows[rowIndex].Cells[3].Value.ToString();
                 textBoxQtde.Text = usersGrid.Rows[rowIndex].Cells[4].Value.ToString();
+                textBoxValorUni.Text = usersGrid.Rows[rowIndex].Cells[9].Value.ToString();
+
+
 
             }
         }
@@ -190,9 +196,14 @@ namespace SistemaVendas.Formularios
                 p.nome = textBoxNomeCat.Text;
                 p.categoria = comboBoxCategorias.Text;
                 p.descricao = textBoxDesc.Text;
-                p.qtde = decimal.Parse(textBoxQtde.Text);
                 p.data_atualizacao = DateTime.Now;
                 int logado_sistema = login.IdLogado();
+
+                if (textBoxQtde.Text != "" && textBoxValorUni.Text != "")
+                {
+                    p.qtde = decimal.Parse(textBoxQtde.Text);
+                    p.preco = decimal.Parse(textBoxValorUni.Text);
+                };
 
                 if (logado_sistema != 0)
                 {

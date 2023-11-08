@@ -17,6 +17,7 @@ namespace SistemaVendas.BLL_classes
         public int add_for { get; set; }
         public int modified_for { get; set; }
         public DateTime data_atualizacao { get; set; }
+        public decimal preco { get; set; }  
 
 
     }
