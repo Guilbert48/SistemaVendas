@@ -215,36 +215,6 @@ namespace SistemaVendas.DAL_classes
             return dt;
 
         }
-        public DataTable PegarProdutoVenda(string keyWords)
-        {
-            SqlConnection con = new SqlConnection(connString);
-            DataTable dt = new DataTable();
-            try
-            {
-                string sql =
-                    $"select nome from tabela_produtos where id LIKE '%{keyWords}%'" +
-                    $"or nome LIKE '%{keyWords}%'";
-
-                SqlCommand cmd = new SqlCommand(sql, con);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-                con.Open();
-                adapter.Fill(dt);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex}", "ERRO");
-            }
-            finally
-            {
-                con.Close();
-            }
-
-            return dt;
-
-        }
 
         #endregion
         #region Validar cadastro
@@ -277,6 +247,41 @@ namespace SistemaVendas.DAL_classes
         }
 
         #endregion
+        public produtos_BLL PegarProdutoVenda(string keyWords)
+        {
+            produtos_BLL p = new produtos_BLL();
+            SqlConnection con = new SqlConnection(connString);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "select nome, preco from tabela_produtos WHERE id = @keywords ";
+
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@keywords", keyWords);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                con.Open();
+                adapter.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    p.nome = dt.Rows[0]["nome"].ToString();
+                    p.preco = decimal.Parse(dt.Rows[0]["preco"].ToString());
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}", "ERRO");
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return p;
+
+        }
 
     }
 }

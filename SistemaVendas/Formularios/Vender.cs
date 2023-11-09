@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaVendas.BLL_classes;
+using SistemaVendas.DAL_classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +19,13 @@ namespace SistemaVendas.Formularios
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        produtos_DAL dal = new produtos_DAL();
+        Vendas_BLL vendas = new Vendas_BLL();
+        //private void limpar()
+        //{
+        //    textBoxNome.Clear();
+        //    textBoxNome.Clear();
+        //}
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -57,6 +61,23 @@ namespace SistemaVendas.Formularios
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBoxCod_TextChanged(object sender, EventArgs e)
+        {
+            string keywords = textBoxCod.Text;
+
+            produtos_BLL p = dal.PegarProdutoVenda(keywords);
+
+            textBoxNome.Text = p.nome;
+            texBoxValorUni.Text = p.preco.ToString();  
+            
+        }
+
+        private void textBoxNome_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+         
+
         }
     }
 }
