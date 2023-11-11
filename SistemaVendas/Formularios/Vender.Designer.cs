@@ -142,6 +142,7 @@
             this.textBoxQtd.Name = "textBoxQtd";
             this.textBoxQtd.Size = new System.Drawing.Size(69, 44);
             this.textBoxQtd.TabIndex = 5;
+            this.textBoxQtd.Text = "1";
             this.textBoxQtd.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textBoxQtd_MaskInputRejected);
             this.textBoxQtd.TextChanged += new System.EventHandler(this.textBoxQtd_TextChanged);
             this.textBoxQtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxQtd_KeyPress);
@@ -202,7 +203,7 @@
             // textBoxDesc
             // 
             this.textBoxDesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDesc.Location = new System.Drawing.Point(291, 365);
+            this.textBoxDesc.Location = new System.Drawing.Point(300, 365);
             this.textBoxDesc.Name = "textBoxDesc";
             this.textBoxDesc.Size = new System.Drawing.Size(229, 44);
             this.textBoxDesc.TabIndex = 51;

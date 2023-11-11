@@ -32,8 +32,7 @@ namespace SistemaVendas.Formularios
         DataTable dt2 = new DataTable();
         private void Vender_Load(object sender, EventArgs e)
         {
-            textBoxCod.Focus();
-            
+            textBoxCod.Focus();    
             dt.Columns.Add("Produto");
             dt.Columns.Add("qtde");
             dt.Columns.Add("preco");
@@ -73,26 +72,33 @@ namespace SistemaVendas.Formularios
         decimal qtde;
         private void textBoxCod_TextChanged(object sender, EventArgs e)
         {
-            textBoxQtd.Text = "1";
             string keywords = textBoxCod.Text;
             dt2 = dal.PegarProdutoVenda(keywords);
-            
-            if(dt2.Rows.Count == 1)
-            {
-                 produto = dt2.Rows[0]["nome"].ToString();
-                 preco = decimal.Parse(dt2.Rows[0]["preco"].ToString());
-                 qtde = decimal.Parse(textBoxQtd.Text);
-                
-                DataRow novaLinha = dt.NewRow();
-                novaLinha["produto"] = produto;
-                novaLinha["preco"] = preco;
-                novaLinha["qtde"] = qtde;
-                
-                dt.Rows.Add(novaLinha);
-                texBoxValorUni.Text = preco.ToString();
 
-                vendasGrid.DataSource = dt;
+            
+                if (dt2.Rows.Count == 1 && textBoxQtd.Text != "")
+                {
+                
+                    produto = dt2.Rows[0]["nome"].ToString();
+                    preco = decimal.Parse(dt2.Rows[0]["preco"].ToString());
+                    qtde = decimal.Parse(textBoxQtd.Text);
+
+                    DataRow novaLinha = dt.NewRow();
+                    novaLinha["produto"] = produto;
+                    novaLinha["preco"] = preco;
+                    novaLinha["qtde"] = qtde;
+
+                    dt.Rows.Add(novaLinha);
+
+                    texBoxValorUni.Text = preco.ToString();
+                    textBoxNome.Text = produto.ToString();
+
+                    vendasGrid.DataSource = dt;
+                    textBoxCod.Clear();
+                    textBoxQtd.Text = "1";
+
             }
+            
 
 
 
@@ -107,17 +113,15 @@ namespace SistemaVendas.Formularios
         }
         private void textBoxQtd_TextChanged(object sender, EventArgs e)
         {
-            //if(textBoxQtd.Text != "")
-            //{
-            //    decimal qtd = decimal.Parse(textBoxQtd.Text);
-            //    //decimal valorUni = decimal.Parse(texBoxValorUni.Text);
-            //    DataRow row = dt.Rows[0];
-            //    row["qtde"] = qtd;
-            //    vendasGrid.DataSource = dt;
-
-            //    decimal subTotal = valorUni * qtd;
-            //    textBoxSubTotal.Text = subTotal.ToString();
-            //}
+            if(dt.Rows.Count >= 1 && textBoxQtd.Text != "")
+            {
+               qtde = decimal.Parse(textBoxQtd.Text);
+               DataRow row = dt.Rows[dt.Rows.Count - 1];
+               row["qtde"] = qtde;
+  
+                decimal subTotal = preco * qtde;
+                textBoxSubTotal.Text = subTotal.ToString();
+            }
 
         }
         
@@ -126,8 +130,9 @@ namespace SistemaVendas.Formularios
             //if (dt.Rows.Count >= 1)
             //{
             //    DataGridViewRow ultimaLinha = vendasGrid.Rows[e.RowIndex];
-            //    texBoxValorUni.Text = ultimaLinha.Cells["preco"].Value.ToString();
-                
+            //    ultimaLinha.Cells["qtde"].Value = textBoxQtd.Text;
+            //    vendasGrid.DataSource = dt;
+
             //}
         }
 
