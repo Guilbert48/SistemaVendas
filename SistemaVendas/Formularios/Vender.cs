@@ -21,20 +21,26 @@ namespace SistemaVendas.Formularios
         }
         produtos_DAL dal = new produtos_DAL();
         Vendas_BLL vendas = new Vendas_BLL();
-        //private void limpar()
-        //{
-        //    textBoxNome.Clear();
-        //    textBoxNome.Clear();
-        //}
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        DataTable dt = new DataTable();
+        DataTable dt2 = new DataTable();
         private void Vender_Load(object sender, EventArgs e)
         {
-           textBoxCod.Focus();
+            textBoxCod.Focus();
+            
+            dt.Columns.Add("Produto");
+            dt.Columns.Add("qtde");
+            dt.Columns.Add("preco");
+
+            dt2.Columns.Add("Produto");
+            dt2.Columns.Add("qtde");
+            dt2.Columns.Add("preco");
         }
 
         private void textBoxCod_KeyPress(object sender, KeyPressEventArgs e)
@@ -62,21 +68,71 @@ namespace SistemaVendas.Formularios
                 e.Handled = true;
             }
         }
-
+        string produto;
+        decimal preco;
+        decimal qtde;
         private void textBoxCod_TextChanged(object sender, EventArgs e)
         {
+            textBoxQtd.Text = "1";
             string keywords = textBoxCod.Text;
-
-            produtos_BLL p = dal.PegarProdutoVenda(keywords);
-
-            textBoxNome.Text = p.nome;
-            texBoxValorUni.Text = p.preco.ToString();  
+            dt2 = dal.PegarProdutoVenda(keywords);
             
+            if(dt2.Rows.Count == 1)
+            {
+                 produto = dt2.Rows[0]["nome"].ToString();
+                 preco = decimal.Parse(dt2.Rows[0]["preco"].ToString());
+                 qtde = decimal.Parse(textBoxQtd.Text);
+                
+                DataRow novaLinha = dt.NewRow();
+                novaLinha["produto"] = produto;
+                novaLinha["preco"] = preco;
+                novaLinha["qtde"] = qtde;
+                
+                dt.Rows.Add(novaLinha);
+                texBoxValorUni.Text = preco.ToString();
+
+                vendasGrid.DataSource = dt;
+            }
+
+
+
+           
+            // decimal valorUni = decimal.Parse(texBoxValorUni.Text);
+            //string produtoNome = p.nome;
+            //decimal preco = p.preco;
+            //decimal qtd = decimal.Parse(textBoxQtd.Text);
+
+            //dt.Rows.Add(produtoNome,qtd, preco);
+
+        }
+        private void textBoxQtd_TextChanged(object sender, EventArgs e)
+        {
+            //if(textBoxQtd.Text != "")
+            //{
+            //    decimal qtd = decimal.Parse(textBoxQtd.Text);
+            //    //decimal valorUni = decimal.Parse(texBoxValorUni.Text);
+            //    DataRow row = dt.Rows[0];
+            //    row["qtde"] = qtd;
+            //    vendasGrid.DataSource = dt;
+
+            //    decimal subTotal = valorUni * qtd;
+            //    textBoxSubTotal.Text = subTotal.ToString();
+            //}
+
+        }
+        
+        private void vendasGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //if (dt.Rows.Count >= 1)
+            //{
+            //    DataGridViewRow ultimaLinha = vendasGrid.Rows[e.RowIndex];
+            //    texBoxValorUni.Text = ultimaLinha.Cells["preco"].Value.ToString();
+                
+            //}
         }
 
-        private void textBoxNome_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void textBoxQtd_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-         
 
         }
     }

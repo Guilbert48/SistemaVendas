@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaVendas.Formularios;
 
 namespace SistemaVendas.DAL_classes
 {
@@ -247,9 +248,9 @@ namespace SistemaVendas.DAL_classes
         }
 
         #endregion
-        public produtos_BLL PegarProdutoVenda(string keyWords)
+        public DataTable PegarProdutoVenda(string keyWords)
         {
-            produtos_BLL p = new produtos_BLL();
+            //produtos_BLL p = new produtos_BLL();
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
 
@@ -263,12 +264,12 @@ namespace SistemaVendas.DAL_classes
                 con.Open();
                 adapter.Fill(dt);
 
-                if (dt.Rows.Count > 0)
-                {
-                    p.nome = dt.Rows[0]["nome"].ToString();
-                    p.preco = decimal.Parse(dt.Rows[0]["preco"].ToString());
-
-                }
+                //if (dt.Rows.Count == 1)
+                //{
+                //    p.nome = dt.Rows[0]["nome"].ToString();
+                //    p.preco = decimal.Parse(dt.Rows[0]["preco"].ToString());
+                    
+                //}
             }
             catch (Exception ex)
             {
@@ -279,9 +280,11 @@ namespace SistemaVendas.DAL_classes
                 con.Close();
             }
 
-            return p;
+            return dt;
 
         }
+
+
 
     }
 }
