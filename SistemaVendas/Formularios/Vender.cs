@@ -19,8 +19,7 @@ namespace SistemaVendas.Formularios
         {
             InitializeComponent();
         }
-        produtos_DAL dal = new produtos_DAL();
-        Vendas_BLL vendas = new Vendas_BLL();
+        Vendas_DAL dal = new Vendas_DAL();
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -70,6 +69,7 @@ namespace SistemaVendas.Formularios
         string produto;
         decimal preco;
         decimal qtde;
+        string subTotal;
         private void textBoxCod_TextChanged(object sender, EventArgs e)
         {
             string keywords = textBoxCod.Text;
@@ -83,13 +83,8 @@ namespace SistemaVendas.Formularios
                     preco = decimal.Parse(dt2.Rows[0]["preco"].ToString());
                     qtde = decimal.Parse(textBoxQtd.Text);
 
-                    DataRow novaLinha = dt.NewRow();
-                    novaLinha["produto"] = produto;
-                    novaLinha["preco"] = preco;
-                    novaLinha["qtde"] = qtde;
-
-                    dt.Rows.Add(novaLinha);
-
+                    dal.criarNovaLinha(dt, produto, preco, qtde);
+                    
                     texBoxValorUni.Text = preco.ToString();
                     textBoxNome.Text = produto.ToString();
 
@@ -97,18 +92,10 @@ namespace SistemaVendas.Formularios
                     textBoxCod.Clear();
                     textBoxQtd.Text = "1";
 
+                    subTotal = dal.CalculosVenda(dt);
+                    textBoxSubTotal.Text = subTotal;
+
             }
-            
-
-
-
-           
-            // decimal valorUni = decimal.Parse(texBoxValorUni.Text);
-            //string produtoNome = p.nome;
-            //decimal preco = p.preco;
-            //decimal qtd = decimal.Parse(textBoxQtd.Text);
-
-            //dt.Rows.Add(produtoNome,qtd, preco);
 
         }
         private void textBoxQtd_TextChanged(object sender, EventArgs e)
@@ -118,27 +105,10 @@ namespace SistemaVendas.Formularios
                qtde = decimal.Parse(textBoxQtd.Text);
                DataRow row = dt.Rows[dt.Rows.Count - 1];
                row["qtde"] = qtde;
-  
-                decimal subTotal = preco * qtde;
-                textBoxSubTotal.Text = subTotal.ToString();
+               subTotal = dal.CalculosVenda(dt);
+               textBoxSubTotal.Text = subTotal;
             }
-
-        }
-        
-        private void vendasGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            //if (dt.Rows.Count >= 1)
-            //{
-            //    DataGridViewRow ultimaLinha = vendasGrid.Rows[e.RowIndex];
-            //    ultimaLinha.Cells["qtde"].Value = textBoxQtd.Text;
-            //    vendasGrid.DataSource = dt;
-
-            //}
         }
 
-        private void textBoxQtd_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
     }
 }

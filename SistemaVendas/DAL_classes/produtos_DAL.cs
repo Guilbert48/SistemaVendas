@@ -248,41 +248,6 @@ namespace SistemaVendas.DAL_classes
         }
 
         #endregion
-        public DataTable PegarProdutoVenda(string keyWords)
-        {
-            //produtos_BLL p = new produtos_BLL();
-            SqlConnection con = new SqlConnection(connString);
-            DataTable dt = new DataTable();
-
-            try
-            {
-                string sql = "select nome, preco from tabela_produtos WHERE id = @keywords ";
-
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@keywords", keyWords);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                con.Open();
-                adapter.Fill(dt);
-
-                //if (dt.Rows.Count == 1)
-                //{
-                //    p.nome = dt.Rows[0]["nome"].ToString();
-                //    p.preco = decimal.Parse(dt.Rows[0]["preco"].ToString());
-                    
-                //}
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex}", "ERRO");
-            }
-            finally
-            {
-                con.Close();
-            }
-
-            return dt;
-
-        }
 
 
 
