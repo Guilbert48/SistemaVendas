@@ -52,6 +52,11 @@ namespace SistemaVendas.Formularios
             {
                 e.Handled = true;
             }
+
+            if (e.KeyChar == 'q') 
+            { 
+                textBoxQtd.Focus();
+            } ;
         }
 
         private void textBoxQtd_KeyPress(object sender, KeyPressEventArgs e)
@@ -70,15 +75,17 @@ namespace SistemaVendas.Formularios
         decimal preco;
         decimal qtde;
         string subTotal;
+      
         private void textBoxCod_TextChanged(object sender, EventArgs e)
         {
-            string keywords = textBoxCod.Text;
-            dt2 = dal.PegarProdutoVenda(keywords);
+
+                string keywords = textBoxCod.Text;
+                dt2 = dal.PegarProdutoVenda(keywords);
 
             
                 if (dt2.Rows.Count == 1 && textBoxQtd.Text != "")
                 {
-                
+                   
                     produto = dt2.Rows[0]["nome"].ToString();
                     preco = decimal.Parse(dt2.Rows[0]["preco"].ToString());
                     qtde = decimal.Parse(textBoxQtd.Text);
@@ -96,6 +103,7 @@ namespace SistemaVendas.Formularios
                     textBoxSubTotal.Text = subTotal;
 
             }
+            
 
         }
         private void textBoxQtd_TextChanged(object sender, EventArgs e)
@@ -110,5 +118,32 @@ namespace SistemaVendas.Formularios
             }
         }
 
+        private void textBoxValorPago_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxValorPago.Text != "" && textBoxSubTotal.Text != "")
+            {      
+                decimal troco = decimal.Parse(textBoxValorPago.Text) - decimal.Parse(subTotal);
+                textBoxTroco.Text = troco.ToString();
+            }
+        }
+
+        private void textBoxCod_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxValorPago.Clear();
+            textBoxTroco.Clear();
+        }
+
+        private void textBoxQtd_Enter(object sender, EventArgs e)
+        {
+            textBoxQtd.SelectionStart = textBoxQtd.Text.Length;
+            textBoxQtd.SelectionLength = 0;
+            textBoxValorPago.Clear();
+            textBoxTroco.Clear();
+        }
+
+        private void vendasGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            vendasGrid.Rows[0].Selected = false;
+        }
     }
 }

@@ -104,16 +104,16 @@ namespace SistemaVendas.DAL_classes
         }
 
         #endregion
-        #region
-        public void criarNovaLinha(DataTable dt, string produto,decimal preco,decimal qtde)
-        {
-            DataRow novaLinha = dt.NewRow();
-            novaLinha["produto"] = produto;
-            novaLinha["preco"] = preco;
-            novaLinha["qtde"] = qtde;
+        #region Criar nova linha
+            public void criarNovaLinha(DataTable dt, string produto,decimal preco,decimal qtde)
+            {
+                DataRow novaLinha = dt.NewRow();
+                novaLinha["produto"] = produto;
+                novaLinha["preco"] = preco;
+                novaLinha["qtde"] = qtde;
 
-            dt.Rows.Add(novaLinha);
-        }
-        #endregion
+                dt.Rows.Add(novaLinha);
+            }
+            #endregion
     }
 }

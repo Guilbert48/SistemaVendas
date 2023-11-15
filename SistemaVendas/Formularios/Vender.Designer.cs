@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vender));
             this.vendasGrid = new System.Windows.Forms.DataGridView();
             this.textBoxCod = new System.Windows.Forms.TextBox();
@@ -66,31 +66,32 @@
             // 
             this.vendasGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.vendasGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vendasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vendasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.vendasGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vendasGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.vendasGrid.Location = new System.Drawing.Point(535, 117);
             this.vendasGrid.MultiSelect = false;
             this.vendasGrid.Name = "vendasGrid";
             this.vendasGrid.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vendasGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vendasGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.vendasGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.vendasGrid.Size = new System.Drawing.Size(787, 346);
             this.vendasGrid.TabIndex = 43;
+            this.vendasGrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.vendasGrid_RowsAdded);
             // 
             // textBoxCod
             // 
@@ -99,6 +100,7 @@
             this.textBoxCod.Name = "textBoxCod";
             this.textBoxCod.Size = new System.Drawing.Size(498, 44);
             this.textBoxCod.TabIndex = 0;
+            this.textBoxCod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxCod_MouseClick);
             this.textBoxCod.TextChanged += new System.EventHandler(this.textBoxCod_TextChanged);
             this.textBoxCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCod_KeyPress);
             // 
@@ -143,6 +145,7 @@
             this.textBoxQtd.TabIndex = 5;
             this.textBoxQtd.Text = "1";
             this.textBoxQtd.TextChanged += new System.EventHandler(this.textBoxQtd_TextChanged);
+            this.textBoxQtd.Enter += new System.EventHandler(this.textBoxQtd_Enter);
             this.textBoxQtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxQtd_KeyPress);
             // 
             // label6
@@ -213,6 +216,7 @@
             this.textBoxValorPago.Name = "textBoxValorPago";
             this.textBoxValorPago.Size = new System.Drawing.Size(372, 44);
             this.textBoxValorPago.TabIndex = 53;
+            this.textBoxValorPago.TextChanged += new System.EventHandler(this.textBoxValorPago_TextChanged);
             // 
             // textBoxTroco
             // 
@@ -253,8 +257,11 @@
             this.comboBoxFrmPag.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFrmPag.FormattingEnabled = true;
             this.comboBoxFrmPag.Items.AddRange(new object[] {
-            "A Vista",
-            "Cartão"});
+            "Espécie",
+            "Débito",
+            "Crédito",
+            "Pix",
+            "Ticket"});
             this.comboBoxFrmPag.Location = new System.Drawing.Point(286, 277);
             this.comboBoxFrmPag.Name = "comboBoxFrmPag";
             this.comboBoxFrmPag.Size = new System.Drawing.Size(243, 46);
