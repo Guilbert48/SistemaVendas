@@ -145,5 +145,13 @@ namespace SistemaVendas.Formularios
         {
             vendasGrid.Rows[0].Selected = false;
         }
+
+        private void textBoxDesc_TextChanged(object sender, EventArgs e)
+        {
+            if(textBoxDesc.Text != "")
+            {
+
+            }
+        }
     }
 }

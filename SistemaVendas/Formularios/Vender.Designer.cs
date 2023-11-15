@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vender));
             this.vendasGrid = new System.Windows.Forms.DataGridView();
             this.textBoxCod = new System.Windows.Forms.TextBox();
@@ -38,11 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxQtd = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxSubTotal = new System.Windows.Forms.TextBox();
-            this.textBoxDesc = new System.Windows.Forms.TextBox();
             this.textBoxValorPago = new System.Windows.Forms.TextBox();
             this.textBoxTroco = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -66,28 +64,28 @@
             // 
             this.vendasGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.vendasGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vendasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vendasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.vendasGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vendasGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.vendasGrid.Location = new System.Drawing.Point(535, 117);
             this.vendasGrid.MultiSelect = false;
             this.vendasGrid.Name = "vendasGrid";
             this.vendasGrid.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vendasGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vendasGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.vendasGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.vendasGrid.Size = new System.Drawing.Size(787, 346);
             this.vendasGrid.TabIndex = 43;
@@ -159,17 +157,6 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Sub total";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(286, 336);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 26);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Desconto (%)";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -201,14 +188,6 @@
             this.textBoxSubTotal.Size = new System.Drawing.Size(787, 48);
             this.textBoxSubTotal.TabIndex = 50;
             // 
-            // textBoxDesc
-            // 
-            this.textBoxDesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDesc.Location = new System.Drawing.Point(291, 365);
-            this.textBoxDesc.Name = "textBoxDesc";
-            this.textBoxDesc.Size = new System.Drawing.Size(238, 44);
-            this.textBoxDesc.TabIndex = 51;
-            // 
             // textBoxValorPago
             // 
             this.textBoxValorPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,7 +211,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label11.Location = new System.Drawing.Point(281, 248);
+            this.label11.Location = new System.Drawing.Point(281, 263);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(219, 26);
             this.label11.TabIndex = 56;
@@ -243,9 +222,9 @@
             this.btnConcluirVenda.BackColor = System.Drawing.Color.ForestGreen;
             this.btnConcluirVenda.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConcluirVenda.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConcluirVenda.Location = new System.Drawing.Point(291, 424);
+            this.btnConcluirVenda.Location = new System.Drawing.Point(282, 361);
             this.btnConcluirVenda.Name = "btnConcluirVenda";
-            this.btnConcluirVenda.Size = new System.Drawing.Size(229, 83);
+            this.btnConcluirVenda.Size = new System.Drawing.Size(243, 113);
             this.btnConcluirVenda.TabIndex = 57;
             this.btnConcluirVenda.Text = "Concluir venda";
             this.btnConcluirVenda.UseVisualStyleBackColor = false;
@@ -262,7 +241,7 @@
             "Crédito",
             "Pix",
             "Ticket"});
-            this.comboBoxFrmPag.Location = new System.Drawing.Point(286, 277);
+            this.comboBoxFrmPag.Location = new System.Drawing.Point(286, 292);
             this.comboBoxFrmPag.Name = "comboBoxFrmPag";
             this.comboBoxFrmPag.Size = new System.Drawing.Size(243, 46);
             this.comboBoxFrmPag.TabIndex = 59;
@@ -291,9 +270,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaVendas.Properties.Resources.icon_frente_caixa;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 336);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 361);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 276);
+            this.pictureBox1.Size = new System.Drawing.Size(246, 251);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 62;
             this.pictureBox1.TabStop = false;
@@ -334,7 +313,7 @@
             // texBoxValorUni
             // 
             this.texBoxValorUni.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texBoxValorUni.Location = new System.Drawing.Point(28, 279);
+            this.texBoxValorUni.Location = new System.Drawing.Point(28, 294);
             this.texBoxValorUni.Name = "texBoxValorUni";
             this.texBoxValorUni.ReadOnly = true;
             this.texBoxValorUni.Size = new System.Drawing.Size(254, 44);
@@ -345,7 +324,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(23, 248);
+            this.label8.Location = new System.Drawing.Point(23, 263);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 26);
             this.label8.TabIndex = 67;
@@ -356,9 +335,9 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Red;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(291, 527);
+            this.btnCancelar.Location = new System.Drawing.Point(282, 499);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(229, 83);
+            this.btnCancelar.Size = new System.Drawing.Size(243, 113);
             this.btnCancelar.TabIndex = 68;
             this.btnCancelar.Text = "Cancelar venda";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -385,7 +364,6 @@
             this.Controls.Add(this.textBoxQtd);
             this.Controls.Add(this.textBoxValorPago);
             this.Controls.Add(this.vendasGrid);
-            this.Controls.Add(this.textBoxDesc);
             this.Controls.Add(this.textBoxCod);
             this.Controls.Add(this.textBoxSubTotal);
             this.Controls.Add(this.label1);
@@ -393,7 +371,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Vender";
@@ -417,11 +394,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox textBoxQtd;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxSubTotal;
-        private System.Windows.Forms.TextBox textBoxDesc;
         private System.Windows.Forms.TextBox textBoxValorPago;
         private System.Windows.Forms.TextBox textBoxTroco;
         private System.Windows.Forms.Label label11;

@@ -100,6 +100,7 @@ namespace SistemaVendas.DAL_classes
                     somaResultados += resultado;
                 }
             }
+
             return somaResultados.ToString();
         }
 
