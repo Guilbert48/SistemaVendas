@@ -95,7 +95,7 @@ namespace SistemaVendas.Formularios
         public int IdLogado(){
            return idLogado;
 
-     }
+        }
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {

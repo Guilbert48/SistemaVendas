@@ -49,7 +49,6 @@ namespace SistemaVendas.DAL_classes
         #region Pegar produtos
         public DataTable PegarProdutoVenda(string keyWords)
         {
-            //produtos_BLL p = new produtos_BLL();
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
 
@@ -62,13 +61,6 @@ namespace SistemaVendas.DAL_classes
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 con.Open();
                 adapter.Fill(dt);
-
-                //if (dt.Rows.Count == 1)
-                //{
-                //    p.nome = dt.Rows[0]["nome"].ToString();
-                //    p.preco = decimal.Parse(dt.Rows[0]["preco"].ToString());
-
-                //}
             }
             catch (Exception ex)
             {
@@ -115,6 +107,60 @@ namespace SistemaVendas.DAL_classes
 
                 dt.Rows.Add(novaLinha);
             }
-            #endregion
+        #endregion
+        #region Inserir na base de dados
+        public bool Insert(Vendas_BLL v)
+        {
+            bool isSucesso = false;
+
+            SqlConnection con = new SqlConnection(connString);
+
+            try
+            {
+                string sql =
+                    "INSERT into tabela_transacao(id, total_geral, transacao_data, add_for)" +
+                    $"values(@id, @total_geral, @transacao_data, @add_for)";
+
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@id", v.id);
+                cmd.Parameters.AddWithValue("@total_geral", v.total);
+                cmd.Parameters.AddWithValue("categoria", v.transacao_data);
+                cmd.Parameters.AddWithValue("@descricao", v.add_for);
+
+                con.Open();
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    isSucesso = true;
+                }
+                else
+                {
+                    isSucesso = false;
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                isSucesso = false;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isSucesso;
+        }
+
+        #endregion
+        #region Gerar aleatório
+        public int GeradorDeID()
+        {
+            Random random = new Random();
+            int numeroAleatorio = random.Next(100000000, 999999999);
+            return numeroAleatorio;
+        }
+        #endregion
     }
 }

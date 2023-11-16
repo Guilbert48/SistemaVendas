@@ -9,10 +9,8 @@ namespace SistemaVendas.BLL_classes
     internal class Vendas_BLL
     {
         public int id {  get; set; }
-        public string tipo { get; set; }
         public decimal total { get; set; }
         public DateTime transacao_data { get; set; }
-        public decimal desconto { get; set; }
         public int add_for { get; set; }
     }
 }

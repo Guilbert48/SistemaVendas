@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vender));
             this.vendasGrid = new System.Windows.Forms.DataGridView();
             this.textBoxCod = new System.Windows.Forms.TextBox();
@@ -64,28 +64,28 @@
             // 
             this.vendasGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.vendasGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vendasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vendasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.vendasGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vendasGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.vendasGrid.Location = new System.Drawing.Point(535, 117);
             this.vendasGrid.MultiSelect = false;
             this.vendasGrid.Name = "vendasGrid";
             this.vendasGrid.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vendasGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vendasGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.vendasGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.vendasGrid.Size = new System.Drawing.Size(787, 346);
             this.vendasGrid.TabIndex = 43;
@@ -106,7 +106,7 @@
             // 
             this.textBoxNome.BackColor = System.Drawing.Color.White;
             this.textBoxNome.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNome.Location = new System.Drawing.Point(26, 201);
+            this.textBoxNome.Location = new System.Drawing.Point(27, 209);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.ReadOnly = true;
             this.textBoxNome.Size = new System.Drawing.Size(423, 44);
@@ -128,7 +128,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(21, 173);
+            this.label2.Location = new System.Drawing.Point(22, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 26);
             this.label2.TabIndex = 3;
@@ -137,7 +137,7 @@
             // textBoxQtd
             // 
             this.textBoxQtd.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQtd.Location = new System.Drawing.Point(455, 202);
+            this.textBoxQtd.Location = new System.Drawing.Point(456, 210);
             this.textBoxQtd.Name = "textBoxQtd";
             this.textBoxQtd.Size = new System.Drawing.Size(69, 44);
             this.textBoxQtd.TabIndex = 5;
@@ -193,7 +193,7 @@
             this.textBoxValorPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxValorPago.Location = new System.Drawing.Point(535, 566);
             this.textBoxValorPago.Name = "textBoxValorPago";
-            this.textBoxValorPago.Size = new System.Drawing.Size(372, 44);
+            this.textBoxValorPago.Size = new System.Drawing.Size(389, 44);
             this.textBoxValorPago.TabIndex = 53;
             this.textBoxValorPago.TextChanged += new System.EventHandler(this.textBoxValorPago_TextChanged);
             // 
@@ -211,7 +211,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label11.Location = new System.Drawing.Point(281, 263);
+            this.label11.Location = new System.Drawing.Point(281, 274);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(219, 26);
             this.label11.TabIndex = 56;
@@ -222,12 +222,13 @@
             this.btnConcluirVenda.BackColor = System.Drawing.Color.ForestGreen;
             this.btnConcluirVenda.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConcluirVenda.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConcluirVenda.Location = new System.Drawing.Point(282, 361);
+            this.btnConcluirVenda.Location = new System.Drawing.Point(282, 380);
             this.btnConcluirVenda.Name = "btnConcluirVenda";
             this.btnConcluirVenda.Size = new System.Drawing.Size(243, 113);
             this.btnConcluirVenda.TabIndex = 57;
             this.btnConcluirVenda.Text = "Concluir venda";
             this.btnConcluirVenda.UseVisualStyleBackColor = false;
+            this.btnConcluirVenda.Click += new System.EventHandler(this.btnConcluirVenda_Click);
             // 
             // comboBoxFrmPag
             // 
@@ -241,7 +242,7 @@
             "Crédito",
             "Pix",
             "Ticket"});
-            this.comboBoxFrmPag.Location = new System.Drawing.Point(286, 292);
+            this.comboBoxFrmPag.Location = new System.Drawing.Point(286, 308);
             this.comboBoxFrmPag.Name = "comboBoxFrmPag";
             this.comboBoxFrmPag.Size = new System.Drawing.Size(243, 46);
             this.comboBoxFrmPag.TabIndex = 59;
@@ -251,7 +252,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(471, 173);
+            this.label4.Location = new System.Drawing.Point(472, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 26);
             this.label4.TabIndex = 60;
@@ -261,7 +262,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Location = new System.Drawing.Point(452, 182);
+            this.label12.Location = new System.Drawing.Point(453, 190);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 13);
             this.label12.TabIndex = 61;
@@ -270,9 +271,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaVendas.Properties.Resources.icon_frente_caixa;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 361);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 380);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 251);
+            this.pictureBox1.Size = new System.Drawing.Size(246, 232);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 62;
             this.pictureBox1.TabStop = false;
@@ -313,7 +314,7 @@
             // texBoxValorUni
             // 
             this.texBoxValorUni.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texBoxValorUni.Location = new System.Drawing.Point(28, 294);
+            this.texBoxValorUni.Location = new System.Drawing.Point(26, 310);
             this.texBoxValorUni.Name = "texBoxValorUni";
             this.texBoxValorUni.ReadOnly = true;
             this.texBoxValorUni.Size = new System.Drawing.Size(254, 44);
@@ -324,7 +325,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(23, 263);
+            this.label8.Location = new System.Drawing.Point(21, 279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 26);
             this.label8.TabIndex = 67;

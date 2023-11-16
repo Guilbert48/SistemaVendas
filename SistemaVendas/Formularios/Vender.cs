@@ -21,7 +21,6 @@ namespace SistemaVendas.Formularios
         }
         Vendas_DAL dal = new Vendas_DAL();
 
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -146,12 +145,14 @@ namespace SistemaVendas.Formularios
             vendasGrid.Rows[0].Selected = false;
         }
 
-        private void textBoxDesc_TextChanged(object sender, EventArgs e)
+        private void btnConcluirVenda_Click(object sender, EventArgs e)
         {
-            if(textBoxDesc.Text != "")
-            {
-
-            }
+            Vendas_BLL v = new Vendas_BLL();
+            v.id = dal.GeradorDeID();
+            v.total = decimal.Parse(textBoxSubTotal.Text);
+            v.transacao_data = DateTime.Now;
+            Login l = new Login();
+            v.add_for = l.IdLogado();
         }
     }
 }
