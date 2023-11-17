@@ -28,6 +28,16 @@ namespace SistemaVendas.Formularios
 
         DataTable dt = new DataTable();
         DataTable dt2 = new DataTable();
+        public void Limpar()
+        {
+            texBoxValorUni.Clear();
+            textBoxNome.Clear();
+            textBoxQtd.Clear();
+            textBoxSubTotal.Clear();
+            textBoxTroco.Clear();
+            textBoxValorPago.Clear();
+            comboBoxFrmPag.SelectedIndex = -1;
+        }
         private void Vender_Load(object sender, EventArgs e)
         {
             textBoxCod.Focus();    
@@ -68,6 +78,10 @@ namespace SistemaVendas.Formularios
             if (e.KeyChar == '.' && (sender as System.Windows.Forms.TextBox).Text.Contains('.'))
             {
                 e.Handled = true;
+            }
+            if (e.KeyChar == 'c')
+            {
+                textBoxCod.Focus();
             }
         }
         string produto;
@@ -147,12 +161,38 @@ namespace SistemaVendas.Formularios
 
         private void btnConcluirVenda_Click(object sender, EventArgs e)
         {
-            Vendas_BLL v = new Vendas_BLL();
-            v.id = dal.GeradorDeID();
-            v.total = decimal.Parse(textBoxSubTotal.Text);
-            v.transacao_data = DateTime.Now;
-            Login l = new Login();
-            v.add_for = l.IdLogado();
+            if(dt.Rows.Count > 0 && textBoxSubTotal.Text != "")
+            {
+                Vendas_BLL v = new Vendas_BLL();
+                v.total = decimal.Parse(textBoxSubTotal.Text);
+                v.transacao_data = DateTime.Now;
+                Login l = new Login();
+                v.add_for = l.IdLogado();                
+                v.forma_pagamento = comboBoxFrmPag.Text;
+                bool sucess = dal.Insert(v);
+                if (sucess)
+                {
+                    MessageBox.Show("Concluído com sucesso", "Sucesso");
+                    Limpar();
+                    textBoxCod.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao finalizar a venda", "Erro");
+                    Limpar();
+                    textBoxCod.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum valor cadastrado, tente novamente", "Erro");
+                textBoxCod.Focus(); 
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Limpar();
         }
     }
 }

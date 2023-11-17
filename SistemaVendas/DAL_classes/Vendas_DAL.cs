@@ -118,14 +118,16 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    "INSERT into tabela_transacao(id, total_geral, transacao_data, add_for)" +
-                    $"values(@id, @total_geral, @transacao_data, @add_for)";
+                    "INSERT into tabela_transacao(total_geral, transacao_data, add_for, forma_pagamento)" +
+                    $"values(@total_geral, @transacao_data, @add_for, @forma_pagamento)";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", v.id);
+                
                 cmd.Parameters.AddWithValue("@total_geral", v.total);
-                cmd.Parameters.AddWithValue("categoria", v.transacao_data);
-                cmd.Parameters.AddWithValue("@descricao", v.add_for);
+                cmd.Parameters.AddWithValue("transacao_data", v.transacao_data);
+                cmd.Parameters.AddWithValue("@add_for", v.add_for);
+                cmd.Parameters.AddWithValue("@forma_pagamento", v.forma_pagamento);
+
 
                 con.Open();
                 int rows = cmd.ExecuteNonQuery();

@@ -12,5 +12,7 @@ namespace SistemaVendas.BLL_classes
         public decimal total { get; set; }
         public DateTime transacao_data { get; set; }
         public int add_for { get; set; }
+
+        public string forma_pagamento {  get; set; }    
     }
 }

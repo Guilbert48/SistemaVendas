@@ -34,16 +34,9 @@ namespace SistemaVendas.Formularios
         {
             this.Close();
         }
-        public int Random()
-        {
-            Random random = new Random();
-            int numeroAleatorio = random.Next(1000, 10000);
-            return numeroAleatorio;
-        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            p.id = Random();
             p.nome = textBoxNomeCat.Text;
             p.categoria = comboBoxCategorias.Text;
             p.descricao = textBoxDesc.Text;
