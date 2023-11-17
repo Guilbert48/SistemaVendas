@@ -86,6 +86,12 @@
     <Compile Include="Formularios\formUsuarios.Designer.cs">
       <DependentUpon>formUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\HistóricoVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\HistóricoVendas.Designer.cs">
+      <DependentUpon>HistóricoVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\formUsuarios.resx">
       <DependentUpon>formUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\HistóricoVendas.resx">
+      <DependentUpon>HistóricoVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

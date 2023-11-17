@@ -156,12 +156,39 @@ namespace SistemaVendas.DAL_classes
         }
 
         #endregion
-        #region Gerar aleatório
-        public int GeradorDeID()
+        #region pegar qtd
+        public int AtualizaQuantidade(int idProduto, int qtdSub)
         {
-            Random random = new Random();
-            int numeroAleatorio = random.Next(100000000, 999999999);
-            return numeroAleatorio;
+            int qtdFinal;
+            SqlConnection con = new SqlConnection(connString);
+            DataTable dt = new DataTable();
+            try
+            {
+                string sql = $"select qtde from tabela_produtos where id = '{idProduto}'";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                con.Open();
+                adapter.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            int qtdTotal = Convert.ToInt32(dt.Rows[0][0]);
+
+            if( qtdTotal > qtdSub ) 
+            {
+                 qtdFinal = qtdTotal - qtdSub;
+
+            string sqlATT =
+            $"UPDATE tabela_produtos SET qtde={qtdFinal} where id = '{idProduto}'";
+
+            }
+
+            return 0;
+            
         }
         #endregion
     }

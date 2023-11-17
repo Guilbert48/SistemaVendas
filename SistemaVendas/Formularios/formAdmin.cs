@@ -57,5 +57,11 @@ namespace SistemaVendas
                 v.ShowDialog();
             }
         }
+
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistóricoVendas h = new HistóricoVendas();
+            h.ShowDialog();
+        }
     }
 }

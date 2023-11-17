@@ -34,6 +34,7 @@
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUserLogado = new System.Windows.Forms.Label();
             this.bemVindoTxt = new System.Windows.Forms.Label();
             this.menuStripTop.SuspendLayout();
@@ -46,7 +47,8 @@
             this.categoriasToolStripMenuItem,
             this.produtosToolStripMenuItem,
             this.inventárioToolStripMenuItem,
-            this.transaçõesToolStripMenuItem});
+            this.transaçõesToolStripMenuItem,
+            this.vendasToolStripMenuItem});
             this.menuStripTop.Location = new System.Drawing.Point(0, 0);
             this.menuStripTop.Name = "menuStripTop";
             this.menuStripTop.Size = new System.Drawing.Size(1826, 24);
@@ -86,6 +88,13 @@
             this.transaçõesToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.transaçõesToolStripMenuItem.Text = "Transações ";
             this.transaçõesToolStripMenuItem.Click += new System.EventHandler(this.transaçõesToolStripMenuItem_Click);
+            // 
+            // vendasToolStripMenuItem
+            // 
+            this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.vendasToolStripMenuItem.Text = "Vendas";
+            this.vendasToolStripMenuItem.Click += new System.EventHandler(this.vendasToolStripMenuItem_Click);
             // 
             // txtUserLogado
             // 
@@ -143,6 +152,7 @@
         private System.Windows.Forms.ToolStripMenuItem transaçõesToolStripMenuItem;
         private System.Windows.Forms.Label txtUserLogado;
         private System.Windows.Forms.Label bemVindoTxt;
+        private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
     }
 }
 

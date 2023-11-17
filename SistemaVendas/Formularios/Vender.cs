@@ -161,7 +161,15 @@ namespace SistemaVendas.Formularios
 
         private void btnConcluirVenda_Click(object sender, EventArgs e)
         {
-            if(dt.Rows.Count > 0 && textBoxSubTotal.Text != "")
+            foreach (DataRow row in dt.Rows)
+            {
+                int idProduto;
+                int qtdSub = Convert.ToInt32(row["qtde"]);
+                
+
+            }
+
+            if (dt.Rows.Count > 0 && textBoxSubTotal.Text != "")
             {
                 Vendas_BLL v = new Vendas_BLL();
                 v.total = decimal.Parse(textBoxSubTotal.Text);
