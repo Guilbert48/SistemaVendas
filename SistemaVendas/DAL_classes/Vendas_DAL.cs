@@ -54,7 +54,7 @@ namespace SistemaVendas.DAL_classes
 
             try
             {
-                string sql = "select nome, preco from tabela_produtos WHERE id = @keywords ";
+                string sql = "select id, nome, preco from tabela_produtos WHERE id = @keywords ";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@keywords", keyWords);
@@ -98,9 +98,10 @@ namespace SistemaVendas.DAL_classes
 
         #endregion
         #region Criar nova linha
-            public void criarNovaLinha(DataTable dt, string produto,decimal preco,decimal qtde)
+            public void criarNovaLinha(DataTable dt, int idProduto, string produto,decimal preco,decimal qtde)
             {
                 DataRow novaLinha = dt.NewRow();
+                novaLinha["id"] = idProduto;
                 novaLinha["produto"] = produto;
                 novaLinha["preco"] = preco;
                 novaLinha["qtde"] = qtde;
@@ -157,14 +158,19 @@ namespace SistemaVendas.DAL_classes
 
         #endregion
         #region pegar qtd
-        public int AtualizaQuantidade(int idProduto, int qtdSub)
+        bool isSucess = false;
+        public void AtualizaQuantidade(int idProduto, decimal qtdSub)
         {
-            int qtdFinal;
+            
+
+            decimal qtdFinal;
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+
             try
             {
-                string sql = $"select qtde from tabela_produtos where id = '{idProduto}'";
+                string sql = $"select qtde from tabela_produtos where id = {idProduto}";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 con.Open();
@@ -175,20 +181,33 @@ namespace SistemaVendas.DAL_classes
             {
                 MessageBox.Show(ex.Message);
             }
+            con.Close();
 
-            int qtdTotal = Convert.ToInt32(dt.Rows[0][0]);
+            decimal qtdTotal = Convert.ToDecimal(dt.Rows[0][0]);
 
-            if( qtdTotal > qtdSub ) 
+            if( qtdTotal >= qtdSub ) 
             {
-                 qtdFinal = qtdTotal - qtdSub;
+                qtdFinal = qtdTotal - qtdSub;
 
-            string sqlATT =
-            $"UPDATE tabela_produtos SET qtde={qtdFinal} where id = '{idProduto}'";
+                string sqlATT =
+                $"UPDATE tabela_produtos SET qtde={qtdFinal} where id = '{idProduto}'";
+
+                SqlCommand cmd = new SqlCommand(sqlATT, con);
+                con.Open();
+
+                cmd.ExecuteNonQuery();
+                isSucess = true;
 
             }
-
-            return 0;
-            
+            else
+            {
+                MessageBox.Show("A quantidade de produtos cadastrados no estoque é inferior à quantidade selecionada", "Erro");
+            }
+           
+        }
+        public bool Retornar()
+        {
+            return isSucess;
         }
         #endregion
     }

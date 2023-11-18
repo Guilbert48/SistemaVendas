@@ -40,11 +40,13 @@ namespace SistemaVendas.Formularios
         }
         private void Vender_Load(object sender, EventArgs e)
         {
-            textBoxCod.Focus();    
+            textBoxCod.Focus();
+            dt.Columns.Add("id");
             dt.Columns.Add("Produto");
             dt.Columns.Add("qtde");
             dt.Columns.Add("preco");
 
+            dt2.Columns.Add("id");
             dt2.Columns.Add("Produto");
             dt2.Columns.Add("qtde");
             dt2.Columns.Add("preco");
@@ -88,7 +90,7 @@ namespace SistemaVendas.Formularios
         decimal preco;
         decimal qtde;
         string subTotal;
-      
+        int idProduto;
         private void textBoxCod_TextChanged(object sender, EventArgs e)
         {
 
@@ -98,12 +100,12 @@ namespace SistemaVendas.Formularios
             
                 if (dt2.Rows.Count == 1 && textBoxQtd.Text != "")
                 {
-                   
+                    idProduto = int.Parse(dt2.Rows[0]["id"].ToString());
                     produto = dt2.Rows[0]["nome"].ToString();
                     preco = decimal.Parse(dt2.Rows[0]["preco"].ToString());
                     qtde = decimal.Parse(textBoxQtd.Text);
 
-                    dal.criarNovaLinha(dt, produto, preco, qtde);
+                    dal.criarNovaLinha(dt, idProduto, produto, preco, qtde);
                     
                     texBoxValorUni.Text = preco.ToString();
                     textBoxNome.Text = produto.ToString();
@@ -161,12 +163,21 @@ namespace SistemaVendas.Formularios
 
         private void btnConcluirVenda_Click(object sender, EventArgs e)
         {
-            foreach (DataRow row in dt.Rows)
-            {
-                int idProduto;
-                int qtdSub = Convert.ToInt32(row["qtde"]);
-                
 
+            if (dt.Rows.Count > 0)
+            {
+                bool sucess = dal.Retornar();
+                if (sucess)
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        int idProduto = Convert.ToInt32(row["id"]);
+                        decimal qtdSub = Convert.ToDecimal(row["qtde"]);
+                    
+                        dal.AtualizaQuantidade(idProduto, qtdSub);                   
+                    }
+
+                }
             }
 
             if (dt.Rows.Count > 0 && textBoxSubTotal.Text != "")
