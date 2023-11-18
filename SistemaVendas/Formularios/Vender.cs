@@ -37,6 +37,7 @@ namespace SistemaVendas.Formularios
             textBoxTroco.Clear();
             textBoxValorPago.Clear();
             comboBoxFrmPag.SelectedIndex = -1;
+            dt.Rows.Clear();
         }
         private void Vender_Load(object sender, EventArgs e)
         {
@@ -167,6 +168,7 @@ namespace SistemaVendas.Formularios
             if (dt.Rows.Count > 0)
             {
                 bool sucess = dal.Retornar();
+                MessageBox.Show(sucess.ToString());
                 if (sucess)
                 {
                     foreach (DataRow row in dt.Rows)
@@ -178,6 +180,10 @@ namespace SistemaVendas.Formularios
                     }
 
                 }
+                else
+                {
+                    return;
+                }
             }
 
             if (dt.Rows.Count > 0 && textBoxSubTotal.Text != "")
@@ -188,6 +194,7 @@ namespace SistemaVendas.Formularios
                 Login l = new Login();
                 v.add_for = l.IdLogado();                
                 v.forma_pagamento = comboBoxFrmPag.Text;
+
                 bool sucess = dal.Insert(v);
                 if (sucess)
                 {

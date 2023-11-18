@@ -161,7 +161,6 @@ namespace SistemaVendas.DAL_classes
         bool isSucess = false;
         public void AtualizaQuantidade(int idProduto, decimal qtdSub)
         {
-            
 
             decimal qtdFinal;
             SqlConnection con = new SqlConnection(connString);
@@ -196,6 +195,7 @@ namespace SistemaVendas.DAL_classes
                 con.Open();
 
                 cmd.ExecuteNonQuery();
+
                 isSucess = true;
 
             }
