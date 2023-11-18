@@ -32,7 +32,7 @@ namespace SistemaVendas.Formularios
         {
             texBoxValorUni.Clear();
             textBoxNome.Clear();
-            textBoxQtd.Clear();
+            textBoxQtd.Text = "1";
             textBoxSubTotal.Clear();
             textBoxTroco.Clear();
             textBoxValorPago.Clear();
@@ -98,9 +98,13 @@ namespace SistemaVendas.Formularios
                 string keywords = textBoxCod.Text;
                 dt2 = dal.PegarProdutoVenda(keywords);
 
-            
-                if (dt2.Rows.Count == 1 && textBoxQtd.Text != "")
+                if (textBoxQtd.Text == "")
                 {
+                    textBoxQtd.Text = "1";
+                }
+                if (dt2.Rows.Count == 1)
+                {
+                
                     idProduto = int.Parse(dt2.Rows[0]["id"].ToString());
                     produto = dt2.Rows[0]["nome"].ToString();
                     preco = decimal.Parse(dt2.Rows[0]["preco"].ToString());
@@ -118,9 +122,7 @@ namespace SistemaVendas.Formularios
                     subTotal = dal.CalculosVenda(dt);
                     textBoxSubTotal.Text = subTotal;
 
-            }
-            
-
+                }
         }
         private void textBoxQtd_TextChanged(object sender, EventArgs e)
         {
@@ -167,10 +169,6 @@ namespace SistemaVendas.Formularios
 
             if (dt.Rows.Count > 0)
             {
-                bool sucess = dal.Retornar();
-                MessageBox.Show(sucess.ToString());
-                if (sucess)
-                {
                     foreach (DataRow row in dt.Rows)
                     {
                         int idProduto = Convert.ToInt32(row["id"]);
@@ -178,12 +176,6 @@ namespace SistemaVendas.Formularios
                     
                         dal.AtualizaQuantidade(idProduto, qtdSub);                   
                     }
-
-                }
-                else
-                {
-                    return;
-                }
             }
 
             if (dt.Rows.Count > 0 && textBoxSubTotal.Text != "")

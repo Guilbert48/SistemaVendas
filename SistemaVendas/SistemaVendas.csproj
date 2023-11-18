@@ -163,5 +163,20 @@
   <ItemGroup>
     <None Include="Resources\icon_frente_caixa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciarVenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDV-Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32223.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

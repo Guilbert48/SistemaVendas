@@ -158,18 +158,17 @@ namespace SistemaVendas.DAL_classes
 
         #endregion
         #region pegar qtd
-        bool isSucess = false;
+
         public void AtualizaQuantidade(int idProduto, decimal qtdSub)
         {
 
             decimal qtdFinal;
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
-            DataTable dt2 = new DataTable();
 
             try
             {
-                string sql = $"select qtde from tabela_produtos where id = {idProduto}";
+                string sql = $"select qtde from tabela_produtos where id = '{idProduto}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 con.Open();
@@ -180,11 +179,12 @@ namespace SistemaVendas.DAL_classes
             {
                 MessageBox.Show(ex.Message);
             }
+
             con.Close();
 
             decimal qtdTotal = Convert.ToDecimal(dt.Rows[0][0]);
 
-            if( qtdTotal >= qtdSub ) 
+            if(qtdTotal >= qtdSub) 
             {
                 qtdFinal = qtdTotal - qtdSub;
 
@@ -196,18 +196,12 @@ namespace SistemaVendas.DAL_classes
 
                 cmd.ExecuteNonQuery();
 
-                isSucess = true;
-
             }
             else
             {
-                MessageBox.Show("A quantidade de produtos cadastrados no estoque é inferior à quantidade selecionada", "Erro");
+                MessageBox.Show("Quantidade de produtos em estoque é inferior à quantidade selecionada");
             }
            
-        }
-        public bool Retornar()
-        {
-            return isSucess;
         }
         #endregion
     }
