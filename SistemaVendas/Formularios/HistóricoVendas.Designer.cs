@@ -57,7 +57,7 @@
             this.hstGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.hstGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hstGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.hstGridView.Location = new System.Drawing.Point(12, 170);
+            this.hstGridView.Location = new System.Drawing.Point(12, 141);
             this.hstGridView.MultiSelect = false;
             this.hstGridView.Name = "hstGridView";
             this.hstGridView.ReadOnly = true;
@@ -70,7 +70,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.hstGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.hstGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.hstGridView.Size = new System.Drawing.Size(1023, 509);
+            this.hstGridView.Size = new System.Drawing.Size(1037, 542);
             this.hstGridView.TabIndex = 44;
             // 
             // label2
@@ -78,7 +78,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(363, 18);
+            this.label2.Location = new System.Drawing.Point(370, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(307, 39);
             this.label2.TabIndex = 46;
@@ -87,7 +87,7 @@
             // dataInicio
             // 
             this.dataInicio.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataInicio.Location = new System.Drawing.Point(459, 126);
+            this.dataInicio.Location = new System.Drawing.Point(500, 107);
             this.dataInicio.Mask = "00/00/0000";
             this.dataInicio.Name = "dataInicio";
             this.dataInicio.PromptChar = '0';
@@ -99,7 +99,7 @@
             // dataFinal
             // 
             this.dataFinal.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataFinal.Location = new System.Drawing.Point(601, 126);
+            this.dataFinal.Location = new System.Drawing.Point(642, 107);
             this.dataFinal.Mask = "00/00/0000";
             this.dataFinal.Name = "dataFinal";
             this.dataFinal.PromptChar = '0';
@@ -113,7 +113,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(232, 126);
+            this.label1.Location = new System.Drawing.Point(273, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 28);
             this.label1.TabIndex = 49;
@@ -124,7 +124,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(455, 102);
+            this.label3.Location = new System.Drawing.Point(496, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 21);
             this.label3.TabIndex = 50;
@@ -135,7 +135,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(597, 102);
+            this.label4.Location = new System.Drawing.Point(638, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 21);
             this.label4.TabIndex = 51;
@@ -144,7 +144,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1011, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(1023, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(1047, 691);
+            this.ClientSize = new System.Drawing.Size(1061, 695);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
