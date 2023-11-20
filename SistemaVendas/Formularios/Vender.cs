@@ -126,13 +126,26 @@ namespace SistemaVendas.Formularios
         }
         private void textBoxQtd_TextChanged(object sender, EventArgs e)
         {
+            
+
+            //dal.ChecarQuantidade()
             if(dt.Rows.Count >= 1 && textBoxQtd.Text != "")
             {
                qtde = decimal.Parse(textBoxQtd.Text);
                DataRow row = dt.Rows[dt.Rows.Count - 1];
-               row["qtde"] = qtde;
-               subTotal = dal.CalculosVenda(dt);
-               textBoxSubTotal.Text = subTotal;
+               int produtoId = Convert.ToInt32(row["id"]);
+               bool estoque = dal.ChecarQuantidade(produtoId, qtde);
+                if (estoque)
+                {
+                    row["qtde"] = qtde;
+                    subTotal = dal.CalculosVenda(dt);
+                    textBoxSubTotal.Text = subTotal;
+                }
+                else
+                {
+                    textBoxQtd.Text = "1";
+                }
+               
             }
         }
 
@@ -166,19 +179,21 @@ namespace SistemaVendas.Formularios
 
         private void btnConcluirVenda_Click(object sender, EventArgs e)
         {
-
             if (dt.Rows.Count > 0)
             {
                     foreach (DataRow row in dt.Rows)
                     {
                         int idProduto = Convert.ToInt32(row["id"]);
                         decimal qtdSub = Convert.ToDecimal(row["qtde"]);
-                    
-                        bool qtdEx = dal.AtualizaQuantidade(idProduto, qtdSub);
-                        if (qtdEx)
+
+                        if (dal.ChecarQuantidade(idProduto, qtdSub))
+                        {
+                             dal.AtualizaQuantidade(idProduto, qtdSub);
+                        }
+                        else
                         {
                             return;
-                        };
+                        }  
                     }
             }
 
@@ -214,7 +229,19 @@ namespace SistemaVendas.Formularios
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Limpar();
+            MenuCancelamento m = new MenuCancelamento();
+            m.ShowDialog();
+
+            bool cancel = m.CancelarVenda();
+            if (cancel)
+            {
+                this.Close();
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Close();    
         }
     }
 }

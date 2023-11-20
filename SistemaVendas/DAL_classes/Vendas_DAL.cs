@@ -159,9 +159,8 @@ namespace SistemaVendas.DAL_classes
         #endregion
         #region pegar qtd
 
-        public bool AtualizaQuantidade(int idProduto, decimal qtdSub)
+        public void AtualizaQuantidade(int idProduto, decimal qtdSub)
         {
-            bool qtdExc = false;
             decimal qtdFinal;
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
@@ -197,13 +196,45 @@ namespace SistemaVendas.DAL_classes
                 cmd.ExecuteNonQuery();
 
             }
+        
+        }
+        #endregion
+        #region Checar quantidade de produtos
+        public bool ChecarQuantidade(int idProduto, decimal qtdSub)
+        {
+            bool estoque = false;
+            SqlConnection con = new SqlConnection(connString);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = $"select qtde from tabela_produtos where id = '{idProduto}'";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                con.Open();
+                adapter.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            con.Close();
+
+            decimal qtdTotal = Convert.ToDecimal(dt.Rows[0][0]);
+
+            if (qtdTotal >= qtdSub)
+            {
+                estoque = true;
+            }
             else
             {
                 MessageBox.Show("Quantidade de produtos em estoque é inferior à quantidade selecionada");
-                qtdExc = true;
-                
+                estoque = false;
+
             }
-           return qtdExc;
+            return estoque;
         }
         #endregion
     }

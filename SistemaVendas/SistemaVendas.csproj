@@ -98,13 +98,18 @@
     <Compile Include="Formularios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\MenuCancelamento.Cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuCancelamento.Designer.Cs">
+      <DependentUpon>MenuCancelamento.Cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Produtos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Produtos.Designer.cs">
       <DependentUpon>Produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\userBll.cs" />
     <Compile Include="Formularios\Vender.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuCancelamento.resx">
+      <DependentUpon>MenuCancelamento.Cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produtos.resx">
       <DependentUpon>Produtos.cs</DependentUpon>
