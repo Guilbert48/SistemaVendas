@@ -56,12 +56,52 @@ namespace SistemaVendas
                 Vender v = new Vender();    
                 v.ShowDialog();
             }
+            if (e.KeyCode == Keys.P)
+            {
+                Produtos p = new Produtos();
+                p.ShowDialog();
+            }
+            if (e.KeyCode == Keys.C)
+            {
+                formCategorias c = new formCategorias();
+                c.ShowDialog();
+            }
+            if (e.KeyCode == Keys.T)
+            {
+                HistóricoVendas h = new HistóricoVendas();
+                h.ShowDialog();
+            }
+
         }
 
         private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HistóricoVendas h = new HistóricoVendas();
             h.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Vender v = new Vender();
+            v.ShowDialog();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Produtos p = new Produtos();    
+            p.ShowDialog(); 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            formCategorias f = new formCategorias();
+            f.ShowDialog();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            HistóricoVendas h = new HistóricoVendas();
+            h.ShowDialog(); 
         }
     }
 }

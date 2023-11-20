@@ -174,7 +174,11 @@ namespace SistemaVendas.Formularios
                         int idProduto = Convert.ToInt32(row["id"]);
                         decimal qtdSub = Convert.ToDecimal(row["qtde"]);
                     
-                        dal.AtualizaQuantidade(idProduto, qtdSub);                   
+                        bool qtdEx = dal.AtualizaQuantidade(idProduto, qtdSub);
+                        if (qtdEx)
+                        {
+                            return;
+                        };
                     }
             }
 

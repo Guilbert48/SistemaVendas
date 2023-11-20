@@ -159,9 +159,9 @@ namespace SistemaVendas.DAL_classes
         #endregion
         #region pegar qtd
 
-        public void AtualizaQuantidade(int idProduto, decimal qtdSub)
+        public bool AtualizaQuantidade(int idProduto, decimal qtdSub)
         {
-
+            bool qtdExc = false;
             decimal qtdFinal;
             SqlConnection con = new SqlConnection(connString);
             DataTable dt = new DataTable();
@@ -200,8 +200,10 @@ namespace SistemaVendas.DAL_classes
             else
             {
                 MessageBox.Show("Quantidade de produtos em estoque é inferior à quantidade selecionada");
+                qtdExc = true;
+                
             }
-           
+           return qtdExc;
         }
         #endregion
     }
