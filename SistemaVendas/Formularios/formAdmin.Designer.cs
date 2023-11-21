@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAdmin));
             this.menuStripTop = new System.Windows.Forms.MenuStrip();
+            this.transaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bemVindoTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,22 +46,22 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStripTop.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +78,13 @@
             this.menuStripTop.Size = new System.Drawing.Size(1920, 24);
             this.menuStripTop.TabIndex = 1;
             this.menuStripTop.Text = "menuStrip1";
+            // 
+            // transaçõesToolStripMenuItem
+            // 
+            this.transaçõesToolStripMenuItem.Name = "transaçõesToolStripMenuItem";
+            this.transaçõesToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.transaçõesToolStripMenuItem.Text = "Iniciar venda";
+            this.transaçõesToolStripMenuItem.Click += new System.EventHandler(this.transaçõesToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem
             // 
@@ -99,13 +106,6 @@
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
-            // 
-            // transaçõesToolStripMenuItem
-            // 
-            this.transaçõesToolStripMenuItem.Name = "transaçõesToolStripMenuItem";
-            this.transaçõesToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.transaçõesToolStripMenuItem.Text = "Iniciar venda";
-            this.transaçõesToolStripMenuItem.Click += new System.EventHandler(this.transaçõesToolStripMenuItem_Click);
             // 
             // vendasToolStripMenuItem
             // 
@@ -151,9 +151,9 @@
             this.label2.ForeColor = System.Drawing.Color.MintCream;
             this.label2.Location = new System.Drawing.Point(9, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(571, 64);
+            this.label2.Size = new System.Drawing.Size(281, 64);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Comercial Casa branca";
+            this.label2.Text = "Projeto P3";
             // 
             // label4
             // 
@@ -224,6 +224,17 @@
             this.panel1.Size = new System.Drawing.Size(1920, 83);
             this.panel1.TabIndex = 20;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1879, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(35, 31);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 23;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -290,17 +301,6 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1879, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(35, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 23;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SistemaVendas.Properties.Resources.PDV_Azul;
@@ -346,13 +346,13 @@
             this.menuStripTop.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

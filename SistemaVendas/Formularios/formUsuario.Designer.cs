@@ -92,7 +92,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 967);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1904, 74);
+            this.panel2.Size = new System.Drawing.Size(1917, 74);
             this.panel2.TabIndex = 37;
             // 
             // bemVindoTxt
@@ -235,7 +235,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1904, 83);
+            this.panel1.Size = new System.Drawing.Size(1917, 83);
             this.panel1.TabIndex = 36;
             // 
             // label2
@@ -246,9 +246,9 @@
             this.label2.ForeColor = System.Drawing.Color.MintCream;
             this.label2.Location = new System.Drawing.Point(12, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(571, 64);
+            this.label2.Size = new System.Drawing.Size(281, 64);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Comercial Casa branca";
+            this.label2.Text = "Projeto P3";
             // 
             // pictureBox3
             // 
@@ -270,7 +270,7 @@
             this.vendasToolStripMenuItem});
             this.menuStripTop.Location = new System.Drawing.Point(0, 83);
             this.menuStripTop.Name = "menuStripTop";
-            this.menuStripTop.Size = new System.Drawing.Size(1904, 24);
+            this.menuStripTop.Size = new System.Drawing.Size(1917, 24);
             this.menuStripTop.TabIndex = 39;
             this.menuStripTop.Text = "menuStrip1";
             // 
@@ -308,7 +308,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1917, 1041);
             this.Controls.Add(this.menuStripTop);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
