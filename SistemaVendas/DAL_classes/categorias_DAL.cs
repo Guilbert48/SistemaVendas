@@ -48,92 +48,92 @@ namespace SistemaVendas.DAL_classes
             }
         #endregion
             #region Inserir na base de dados
-        public bool Insert(categorias_BLL c)
-        {
-            bool isSucesso = false;
-
-            SqlConnection con = new SqlConnection(connString);
-
-            try
+            public bool Insert(categorias_BLL c)
             {
-                string sql =
-                    "INSERT into tabela_categorias(nome, descricao, data_cadastro, add_for)" +
-                    $"values(@nome, @descricao, @data_cadastro, @add_for)";
+                bool isSucesso = false;
 
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@nome", c.nome);
-                cmd.Parameters.AddWithValue("@descricao", c.descricao);
-                cmd.Parameters.AddWithValue("@data_cadastro", c.data_cadastro);
-                cmd.Parameters.AddWithValue("@add_for", c.add_for);
+                SqlConnection con = new SqlConnection(connString);
 
-                con.Open();
-                int rows = cmd.ExecuteNonQuery();
-
-                if (rows > 0)
+                try
                 {
-                    isSucesso = true;
+                    string sql =
+                        "INSERT into tabela_categorias(nome, descricao, data_cadastro, add_for)" +
+                        $"values(@nome, @descricao, @data_cadastro, @add_for)";
+
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@nome", c.nome);
+                    cmd.Parameters.AddWithValue("@descricao", c.descricao);
+                    cmd.Parameters.AddWithValue("@data_cadastro", c.data_cadastro);
+                    cmd.Parameters.AddWithValue("@add_for", c.add_for);
+
+                    con.Open();
+                    int rows = cmd.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        isSucesso = true;
+                    }
+                    else
+                    {
+                        isSucesso = false;
+                    }
+
                 }
-                else
+
+                catch (Exception ex)
                 {
-                    isSucesso = false;
+                    MessageBox.Show(ex.Message);
                 }
-
+                finally
+                {
+                    con.Close();
+                }
+                return isSucesso;
             }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-            return isSucesso;
-        }
-
-        #endregion
+            #endregion
             #region Atualizar dados do banco de dados 
-        public bool Update(categorias_BLL c)
-        {
-            bool isSucesso = false;
-
-            SqlConnection con = new SqlConnection(connString);
-
-            try
+            public bool Update(categorias_BLL c)
             {
-                string sql =
-                    "UPDATE tabela_categorias SET nome=@nome,descricao=@descricao, modified_for=@modified_for, data_atualizacao=@data_atualizacao where id=@id";
+                bool isSucesso = false;
 
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@nome", c.nome);
-                cmd.Parameters.AddWithValue("@descricao", c.descricao);
-                cmd.Parameters.AddWithValue("@data_atualizacao", c.data_atualizacao);
-                cmd.Parameters.AddWithValue("@modified_for", c.modified_for);
-                cmd.Parameters.AddWithValue("@id", c.id);
+                SqlConnection con = new SqlConnection(connString);
 
-                con.Open();
-                int rows = cmd.ExecuteNonQuery();
-
-                if (rows > 0)
+                try
                 {
-                    isSucesso = true;
-                }
-                else
-                {
-                    isSucesso = false;
-                }
+                    string sql =
+                        "UPDATE tabela_categorias SET nome=@nome,descricao=@descricao, modified_for=@modified_for, data_atualizacao=@data_atualizacao where id=@id";
 
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("@nome", c.nome);
+                    cmd.Parameters.AddWithValue("@descricao", c.descricao);
+                    cmd.Parameters.AddWithValue("@data_atualizacao", c.data_atualizacao);
+                    cmd.Parameters.AddWithValue("@modified_for", c.modified_for);
+                    cmd.Parameters.AddWithValue("@id", c.id);
+
+                    con.Open();
+                    int rows = cmd.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        isSucesso = true;
+                    }
+                    else
+                    {
+                        isSucesso = false;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                return isSucesso;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-            return isSucesso;
-        }
 
         #endregion
             #region Deletar dados do banco de dados 
@@ -177,71 +177,70 @@ namespace SistemaVendas.DAL_classes
 
         #endregion
             #region Pesquisas na base de dados
-        public DataTable Source(string keyWords)
-        {
+                public DataTable Source(string keyWords)
+                {
 
-            SqlConnection con = new SqlConnection(connString);
-            DataTable dt = new DataTable();
+                    SqlConnection con = new SqlConnection(connString);
+                    DataTable dt = new DataTable();
 
-            try
-            {
-                string sql =
-                    $"select * from tabela_categorias where id LIKE '%{keyWords}%'" +
-                    $"or nome LIKE '%{keyWords}%'";
+                    try
+                    {
+                        string sql =
+                            $"select * from tabela_categorias where id LIKE '%{keyWords}%'" +
+                            $"or nome LIKE '%{keyWords}%'";
 
-                SqlCommand cmd = new SqlCommand(sql, con);
+                        SqlCommand cmd = new SqlCommand(sql, con);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
-                con.Open();
-                adapter.Fill(dt);
+                        con.Open();
+                        adapter.Fill(dt);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex}", "ERRO");
-            }
-            finally
-            {
-                con.Close();
-            }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"{ex}", "ERRO");
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
 
-            return dt;
+                    return dt;
 
-        }
+                }
 
         #endregion
             #region Validar cadastro
-        public bool Validar(string id)
-        {
-            bool val = false;
+                public bool Validar(string id)
+                {
+                    bool val = false;
 
-            string connString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
-            SqlConnection con = new SqlConnection(connString);
+                    string connString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+                    SqlConnection con = new SqlConnection(connString);
 
-            string validação = "select * from tabela_categorias where id = @campo_id";
+                    string validação = "select * from tabela_categorias where id = @campo_id";
 
-            SqlCommand cmdVal = new SqlCommand(validação, con);
-            cmdVal.Parameters.AddWithValue("@campo_id", id);
+                    SqlCommand cmdVal = new SqlCommand(validação, con);
+                    cmdVal.Parameters.AddWithValue("@campo_id", id);
 
-            con.Open();
-            SqlDataReader reader = cmdVal.ExecuteReader();
+                    con.Open();
+                    SqlDataReader reader = cmdVal.ExecuteReader();
 
-            if (reader.HasRows)
-            {
-                MessageBox.Show("Usuário já cadastrado. \nSe deseja modificar, selecione o usuário e clique em 'Atualizar'", "ERRO");
+                    if (reader.HasRows)
+                    {
+                        MessageBox.Show("Usuário já cadastrado. \nSe deseja modificar, selecione o usuário e clique em 'Atualizar'", "ERRO");
 
-            }
-            else
-            {
-                val = true;
-            }
-            con.Close();
-            return val;
-        }
+                    }
+                    else
+                    {
+                        val = true;
+                    }
+                    con.Close();
+                    return val;
+                }
 
         #endregion
-
 
 
     }

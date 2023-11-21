@@ -1,13 +1,8 @@
 ﻿using SistemaVendas.BLL_classes;
 using SistemaVendas.DAL_classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaVendas.Formularios
@@ -148,8 +143,6 @@ namespace SistemaVendas.Formularios
                 textBoxDesc.Text = usersGrid.Rows[rowIndex].Cells[3].Value.ToString();
                 textBoxQtde.Text = usersGrid.Rows[rowIndex].Cells[4].Value.ToString();
                 textBoxValorUni.Text = usersGrid.Rows[rowIndex].Cells[9].Value.ToString();
-
-
 
             }
         }
