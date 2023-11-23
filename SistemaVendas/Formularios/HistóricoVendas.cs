@@ -18,6 +18,7 @@ namespace SistemaVendas.Formularios
             InitializeComponent();
         }
         Vendas_DAL dal = new Vendas_DAL();
+        historico_DAL dalh = new historico_DAL();
         private void HistóricoVendas_Load(object sender, EventArgs e)
         {
             DataTable dt = dal.Select();
@@ -27,6 +28,14 @@ namespace SistemaVendas.Formularios
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void pesquisarBtn_Click(object sender, EventArgs e)
+        {
+            string dataini = dataInicio.Text;
+            string dataFin = dataFinal.Text;
+
+            dalh.Select(dataini, dataFin);
         }
     }
 }

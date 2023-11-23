@@ -32,11 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistóricoVendas));
             this.hstGridView = new System.Windows.Forms.DataGridView();
-            this.dataInicio = new System.Windows.Forms.MaskedTextBox();
-            this.dataFinal = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,7 +61,7 @@
             this.hstGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.hstGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hstGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.hstGridView.Location = new System.Drawing.Point(13, 160);
+            this.hstGridView.Location = new System.Drawing.Point(13, 98);
             this.hstGridView.MultiSelect = false;
             this.hstGridView.Name = "hstGridView";
             this.hstGridView.ReadOnly = true;
@@ -79,65 +74,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.hstGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.hstGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.hstGridView.Size = new System.Drawing.Size(1109, 595);
+            this.hstGridView.Size = new System.Drawing.Size(1109, 657);
             this.hstGridView.TabIndex = 44;
-            // 
-            // dataInicio
-            // 
-            this.dataInicio.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataInicio.Location = new System.Drawing.Point(481, 126);
-            this.dataInicio.Mask = "00/00/0000";
-            this.dataInicio.Name = "dataInicio";
-            this.dataInicio.PromptChar = '0';
-            this.dataInicio.Size = new System.Drawing.Size(123, 28);
-            this.dataInicio.TabIndex = 47;
-            this.dataInicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dataInicio.ValidatingType = typeof(System.DateTime);
-            // 
-            // dataFinal
-            // 
-            this.dataFinal.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataFinal.Location = new System.Drawing.Point(623, 126);
-            this.dataFinal.Mask = "00/00/0000";
-            this.dataFinal.Name = "dataFinal";
-            this.dataFinal.PromptChar = '0';
-            this.dataFinal.Size = new System.Drawing.Size(121, 28);
-            this.dataFinal.TabIndex = 48;
-            this.dataFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dataFinal.ValidatingType = typeof(System.DateTime);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(287, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 28);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Pesquisar período";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(477, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 21);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "DE";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(619, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 21);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "ATÉ";
             // 
             // pictureBox2
             // 
@@ -237,11 +175,6 @@
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1134, 805);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataFinal);
-            this.Controls.Add(this.dataInicio);
             this.Controls.Add(this.hstGridView);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -257,18 +190,12 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView hstGridView;
-        private System.Windows.Forms.MaskedTextBox dataInicio;
-        private System.Windows.Forms.MaskedTextBox dataFinal;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
