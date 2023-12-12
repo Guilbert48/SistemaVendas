@@ -1,9 +1,3 @@
-# Projeto_P3
-Projeto destinado a nota P3 da cadeira de laboratório de programação
-
-# Modo de instalação
-para clonar e rodar o projeto, é necessário um ambiente de desenvolvimento integrado (IDE). Recomendamos o visual studio 2022. Após instalar o visual studio 2022, o próprio programa da diversas opções de instalação para diversos tipos de programa e o que interessa para rodar este projeto é o tipo "Aplicações desktop". Após a instalação, seu ambiente já esta pronto para clonar e compilar o projeto, qualquer trabalho além disso é resolvido pela própria IDE.
-
 # Especificações do projeto
 
 Será construido um sistema de vendas com cadastro de funcionários na base de dados, cadastro de produtos, venda com base nos produtos cadastrados. Serão feitas validações de login a partir dos usuários cadastrados na base de dados através de consultas sql. Será possível fazer CRUD (create, read, update, delete), na maioria das informações e diversas tabelas relacionais, do projeto, além de trabalhar diversos conceitos de SQL como joins, foreign key. primary key, dentre outros. Dentro da aplicação será possível executar vendas, que serão realizadas através de produtos cadastrados, onde suas informações vão servir para trazer um processo totalmente automatizado de cálculos de valor total, descontos e trocos. Além disso todas as vendas finalizadas irão gerar notas fiscais e também vão gerar registros na base de dados onde serão armazenadas informações sobre as vendas como: horário, data, usuário que efetuou a venda vendas daquele dia, lucros e gastos.
