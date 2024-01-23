@@ -56,7 +56,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bemVindoTxt = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -68,7 +68,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DarkCyan;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1417, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(1328, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,9 +136,9 @@
             // 
             this.textBoxPesquisarFunc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPesquisarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPesquisarFunc.Location = new System.Drawing.Point(620, 128);
+            this.textBoxPesquisarFunc.Location = new System.Drawing.Point(593, 130);
             this.textBoxPesquisarFunc.Name = "textBoxPesquisarFunc";
-            this.textBoxPesquisarFunc.Size = new System.Drawing.Size(832, 35);
+            this.textBoxPesquisarFunc.Size = new System.Drawing.Size(761, 35);
             this.textBoxPesquisarFunc.TabIndex = 43;
             this.textBoxPesquisarFunc.TextChanged += new System.EventHandler(this.textBoxPesquisarFunc_TextChanged);
             // 
@@ -169,7 +169,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.usersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.usersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usersGrid.Size = new System.Drawing.Size(1016, 569);
+            this.usersGrid.Size = new System.Drawing.Size(918, 569);
             this.usersGrid.TabIndex = 42;
             this.usersGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersGrid_CellClick);
             this.usersGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usersGrid_KeyDown_1);
@@ -307,10 +307,11 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1476, 73);
+            this.panel1.Size = new System.Drawing.Size(1366, 73);
             this.panel1.TabIndex = 57;
             // 
             // label4
@@ -318,7 +319,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(675, 17);
+            this.label4.Location = new System.Drawing.Point(586, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 42);
             this.label4.TabIndex = 39;
@@ -361,30 +362,30 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel2.Controls.Add(this.bemVindoTxt);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 789);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1476, 44);
+            this.panel2.Size = new System.Drawing.Size(1366, 44);
             this.panel2.TabIndex = 58;
             // 
-            // bemVindoTxt
+            // label1
             // 
-            this.bemVindoTxt.AutoSize = true;
-            this.bemVindoTxt.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bemVindoTxt.ForeColor = System.Drawing.Color.Azure;
-            this.bemVindoTxt.Location = new System.Drawing.Point(675, 6);
-            this.bemVindoTxt.Name = "bemVindoTxt";
-            this.bemVindoTxt.Size = new System.Drawing.Size(194, 38);
-            this.bemVindoTxt.TabIndex = 3;
-            this.bemVindoTxt.Text = "Bem VIndo(a)";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Azure;
+            this.label1.Location = new System.Drawing.Point(566, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 38);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Bem - Vindo(a)";
             // 
             // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(1476, 833);
+            this.ClientSize = new System.Drawing.Size(1366, 833);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxValorUni);
@@ -393,7 +394,6 @@
             this.Controls.Add(this.textBoxQtde);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxCategorias);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnCadastrar);
@@ -452,6 +452,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label bemVindoTxt;
+        private System.Windows.Forms.Label label1;
     }
 }

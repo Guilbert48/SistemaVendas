@@ -236,7 +236,7 @@ namespace SistemaVendas.DAL_classes
 
             if (reader.HasRows)
             {
-                MessageBox.Show("Usuário já cadastrado. \nSe deseja modificar, selecione o usuário e clique em 'Atualizar'", "ERRO");
+                MessageBox.Show("Produto já cadastrado. \nSe deseja modificar, selecione o usuário e clique em 'Atualizar'", "ERRO");
                    
             }
             else

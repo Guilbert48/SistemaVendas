@@ -21,6 +21,7 @@ namespace SistemaVendas.Formularios
         {
             textBoxID.Clear();
             textBoxNomeCat.Clear();
+            textBoxValorUni.Clear();
             textBoxDesc.Clear();
             textBoxQtde.Clear();    
             comboBoxCategorias.SelectedIndex = -1;
@@ -32,6 +33,14 @@ namespace SistemaVendas.Formularios
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if(textBoxID.Text != "")
+            {
+                p.id = int.Parse(textBoxID.Text);
+            }
+            else
+            {
+                return;
+            }
             p.nome = textBoxNomeCat.Text;
             p.categoria = comboBoxCategorias.Text;
             p.descricao = textBoxDesc.Text;
