@@ -45,7 +45,7 @@ namespace SistemaVendas.Formularios
         {
             l.usuario = textBoxLoginUser.Text.Trim();
             l.senha = textBoxSenhaUser.Text.Trim();
-            l.usuario_tipo = comboBoxTipoUser.Text.Trim();
+            l.tipo = comboBoxTipoUser.Text.Trim();
 
             Login_DAL log = new Login_DAL();
             idLogado = log.usuario_logado(l.usuario, l.senha);
@@ -59,7 +59,7 @@ namespace SistemaVendas.Formularios
                 this.Hide();
                 Limpar();
 
-                switch (l.usuario_tipo)
+                switch (l.tipo)
                 {
                     case "ADMIN":
                         {

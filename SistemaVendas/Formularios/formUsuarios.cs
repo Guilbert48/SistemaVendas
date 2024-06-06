@@ -1,4 +1,4 @@
-﻿using SistemaVendas.Classes;
+﻿ using SistemaVendas.Classes;
 using SistemaVendas.DAL_classes;
 using System;
 using System.Collections.Generic;
@@ -36,6 +36,7 @@ namespace SistemaVendas.Formularios
             u.usuario = textBoxLoginUser.Text;
             u.senha = textBoxSenhaUser.Text;
             u.tipo = comboBoxTipoUser.Text;
+            u.add_data = DateTime.Now;
           
            if(u.nome == "" || u.senha == "" || u.tipo == "" || u.usuario == "")
             {

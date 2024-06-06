@@ -60,14 +60,16 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql = 
-                    "INSERT into tabela_users(nome, usuario, senha, usuario_tipo)" +
-                    $"values(@nome, @usuario, @senha, @usuario_tipo)";
+                    "INSERT into tabela_users(nome, usuario, senha, tipo, add_data)" +
+                    $"values(@nome, @usuario, @senha, @tipo, @add_data)";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@nome", u.nome);
                 cmd.Parameters.AddWithValue("@usuario", u.usuario);
                 cmd.Parameters.AddWithValue("@senha", u.senha);
-                cmd.Parameters.AddWithValue("@usuario_tipo", u.tipo);
+                cmd.Parameters.AddWithValue("@tipo", u.tipo);
+                cmd.Parameters.AddWithValue("@add_data", u.add_data);
+
 
                 con.Open();
                 int rows = cmd.ExecuteNonQuery();

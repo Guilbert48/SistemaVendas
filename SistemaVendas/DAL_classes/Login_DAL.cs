@@ -27,12 +27,12 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    "select * from tabela_users where usuario=@usuario and senha=@senha and usuario_tipo=@usuario_tipo";
+                    "select * from tabela_users where usuario=@usuario and senha=@senha and tipo=@tipo";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@usuario", l.usuario);
                 cmd.Parameters.AddWithValue("@senha", l.senha);
-                cmd.Parameters.AddWithValue("@usuario_tipo", l.usuario_tipo);
+                cmd.Parameters.AddWithValue("@tipo", l.tipo);
                 con.Open();
                 SqlDataReader rows = cmd.ExecuteReader();
 
