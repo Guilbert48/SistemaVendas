@@ -32,6 +32,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bemVindoTxt = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label11 = new System.Windows.Forms.Label();
-            this.bemVindoTxt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,6 +95,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1515, 74);
             this.panel2.TabIndex = 37;
+            // 
+            // bemVindoTxt
+            // 
+            this.bemVindoTxt.AutoSize = true;
+            this.bemVindoTxt.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bemVindoTxt.ForeColor = System.Drawing.Color.Azure;
+            this.bemVindoTxt.Location = new System.Drawing.Point(633, 11);
+            this.bemVindoTxt.Name = "bemVindoTxt";
+            this.bemVindoTxt.Size = new System.Drawing.Size(210, 38);
+            this.bemVindoTxt.TabIndex = 4;
+            this.bemVindoTxt.Text = "Bem - Vindo(a)";
             // 
             // pictureBox5
             // 
@@ -236,9 +247,9 @@
             this.label2.ForeColor = System.Drawing.Color.MintCream;
             this.label2.Location = new System.Drawing.Point(12, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 64);
+            this.label2.Size = new System.Drawing.Size(476, 64);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Projeto P3";
+            this.label2.Text = "Sistema de vendas";
             // 
             // pictureBox3
             // 
@@ -300,17 +311,6 @@
             this.label11.Size = new System.Drawing.Size(20, 13);
             this.label11.TabIndex = 40;
             this.label11.Text = "(C)";
-            // 
-            // bemVindoTxt
-            // 
-            this.bemVindoTxt.AutoSize = true;
-            this.bemVindoTxt.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bemVindoTxt.ForeColor = System.Drawing.Color.Azure;
-            this.bemVindoTxt.Location = new System.Drawing.Point(633, 11);
-            this.bemVindoTxt.Name = "bemVindoTxt";
-            this.bemVindoTxt.Size = new System.Drawing.Size(210, 38);
-            this.bemVindoTxt.TabIndex = 4;
-            this.bemVindoTxt.Text = "Bem - Vindo(a)";
             // 
             // formUsuario
             // 

@@ -355,9 +355,9 @@
             this.label6.ForeColor = System.Drawing.Color.MintCream;
             this.label6.Location = new System.Drawing.Point(36, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(281, 64);
+            this.label6.Size = new System.Drawing.Size(476, 64);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Projeto P3";
+            this.label6.Text = "Sistema de vendas";
             // 
             // panel2
             // 

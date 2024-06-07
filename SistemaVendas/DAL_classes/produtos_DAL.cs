@@ -27,7 +27,7 @@ namespace SistemaVendas.DAL_classes
 
             try
             {
-                string sql = "select * from tabela_produtos";
+                string sql = "select * from produtos";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 con.Open();
@@ -56,7 +56,7 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    "INSERT into tabela_produtos(id, nome, categoria, descricao, qtde, data_cadastro, add_for, preco)" +
+                    "INSERT into produtos(id, nome, categoria, descricao, qtde, data_cadastro, add_for, preco)" +
                     $"values(@id, @nome, @categoria, @descricao, @qtde, @data_cadastro, @add_for, @preco)";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -106,14 +106,14 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    "UPDATE tabela_produtos SET nome=@nome, categoria=@categoria, descricao=@descricao, qtde=@qtde, atualizado_por=@modified_for, data_att=@data_att, preco=@preco where id=@id";
+                    "UPDATE produtos SET nome=@nome, categoria=@categoria, descricao=@descricao, qtde=@qtde, modified_for=@modified_for, data_atualizacao=@data_atualizacao, preco=@preco where id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@nome", p.nome);
                 cmd.Parameters.AddWithValue("@categoria", p.categoria);
                 cmd.Parameters.AddWithValue("@descricao", p.descricao);
                 cmd.Parameters.AddWithValue("@qtde", p.qtde);
-                cmd.Parameters.AddWithValue("@data_att", p.data_atualizacao);
+                cmd.Parameters.AddWithValue("@data_atualizacao", p.data_atualizacao);
                 cmd.Parameters.AddWithValue("@modified_for", p.modified_for);
                 cmd.Parameters.AddWithValue("@id", p.id);
                 cmd.Parameters.AddWithValue("@preco", p.preco);
@@ -155,7 +155,7 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    "Delete from tabela_produtos where id=@id";
+                    "Delete from produtos where id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@id", p.id);
@@ -193,7 +193,7 @@ namespace SistemaVendas.DAL_classes
             try
             {
                 string sql =
-                    $"select * from tabela_produtos where id LIKE '%{keyWords}%'" +
+                    $"select * from produtos where id LIKE '%{keyWords}%'" +
                     $"or nome LIKE '%{keyWords}%'";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -226,7 +226,7 @@ namespace SistemaVendas.DAL_classes
             string connString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
             SqlConnection con = new SqlConnection(connString);
 
-            string validação = "select * from tabela_produtos where id = @campo_id";
+            string validação = "select * from produtos where id = @campo_id";
 
             SqlCommand cmdVal = new SqlCommand(validação, con);
             cmdVal.Parameters.AddWithValue("@campo_id", id);

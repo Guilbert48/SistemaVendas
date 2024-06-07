@@ -41,7 +41,6 @@ namespace SistemaVendas.DAL_classes
             {
                 con.Close();
             }
-
             return dt;
         }
 
@@ -54,7 +53,7 @@ namespace SistemaVendas.DAL_classes
 
             try
             {
-                string sql = "select id, nome, preco from tabela_produtos WHERE id = @keywords ";
+                string sql = "select id, nome, preco from produtos WHERE id = @keywords ";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@keywords", keyWords);
@@ -167,7 +166,7 @@ namespace SistemaVendas.DAL_classes
 
             try
             {
-                string sql = $"select qtde from tabela_produtos where id = '{idProduto}'";
+                string sql = $"select qtde from produtos where id = '{idProduto}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 con.Open();
@@ -188,7 +187,7 @@ namespace SistemaVendas.DAL_classes
                 qtdFinal = qtdTotal - qtdSub;
 
                 string sqlATT =
-                $"UPDATE tabela_produtos SET qtde={qtdFinal} where id = '{idProduto}'";
+                $"UPDATE produtos SET qtde={qtdFinal} where id = '{idProduto}'";
 
                 SqlCommand cmd = new SqlCommand(sqlATT, con);
                 con.Open();
@@ -208,7 +207,7 @@ namespace SistemaVendas.DAL_classes
 
             try
             {
-                string sql = $"select qtde from tabela_produtos where id = '{idProduto}'";
+                string sql = $"select qtde from produtos where id = '{idProduto}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 con.Open();

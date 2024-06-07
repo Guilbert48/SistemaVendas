@@ -154,9 +154,9 @@
             this.label2.ForeColor = System.Drawing.Color.MintCream;
             this.label2.Location = new System.Drawing.Point(44, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 64);
+            this.label2.Size = new System.Drawing.Size(490, 64);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Projeto P3";
+            this.label2.Text = "Sisitema de vendas";
             // 
             // label4
             // 
