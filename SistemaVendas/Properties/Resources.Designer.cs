@@ -63,9 +63,30 @@ namespace SistemaVendas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2069440 {
+            get {
+                object obj = ResourceManager.GetObject("2069440", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _32223 {
             get {
                 object obj = ResourceManager.GetObject("32223", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cartoon_Desenho_Moda_Compras_Menina_Silhueta_PNG___Vetor_Dos_Desenhos_Animados__Vetor_De_Moda__Vetor_De_Compras_Imagem_PNG_e_PSD_Para_Download_Gratuito {
+            get {
+                object obj = ResourceManager.GetObject("Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, V" +
+                        "etor De Moda, Vetor De Compras Imagem PNG e PSD Para Download Gratuito", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +124,29 @@ namespace SistemaVendas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PDV_Azul {
             get {
                 object obj = ResourceManager.GetObject("PDV-Azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_fashion_clothing_feminine_purple_fashion_fictional_character {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-fashion-clothing-feminine-purple-fashion-fictional-character", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

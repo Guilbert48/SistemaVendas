@@ -226,5 +226,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-fashion-clothing-feminine-purple-fashion-fictional-character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2069440.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, Vetor De Moda, Vetor De Compras Imagem PNG e PSD Para Download Gratuito.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
