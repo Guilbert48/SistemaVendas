@@ -134,6 +134,26 @@ namespace SistemaVendas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loja_de_roupa {
+            get {
+                object obj = ResourceManager.GetObject("loja-de-roupa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loja_de_roupa__2_ {
+            get {
+                object obj = ResourceManager.GetObject("loja-de-roupa (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PDV_Azul {
             get {
                 object obj = ResourceManager.GetObject("PDV-Azul", resourceCulture);

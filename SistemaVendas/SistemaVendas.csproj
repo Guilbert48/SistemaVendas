@@ -238,5 +238,11 @@
   <ItemGroup>
     <None Include="Resources\Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, Vetor De Moda, Vetor De Compras Imagem PNG e PSD Para Download Gratuito.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loja-de-roupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loja-de-roupa %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
