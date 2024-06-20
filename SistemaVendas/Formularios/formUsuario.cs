@@ -99,5 +99,10 @@ namespace SistemaVendas
         {
             Close();
         }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

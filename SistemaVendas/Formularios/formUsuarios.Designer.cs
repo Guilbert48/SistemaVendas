@@ -48,18 +48,18 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usersGrid)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             this.txtNomeUsusario.BackColor = System.Drawing.Color.Thistle;
             this.txtNomeUsusario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeUsusario.ForeColor = System.Drawing.Color.Purple;
-            this.txtNomeUsusario.Location = new System.Drawing.Point(33, 217);
+            this.txtNomeUsusario.Location = new System.Drawing.Point(34, 183);
             this.txtNomeUsusario.Name = "txtNomeUsusario";
             this.txtNomeUsusario.Size = new System.Drawing.Size(55, 20);
             this.txtNomeUsusario.TabIndex = 1;
@@ -78,19 +78,19 @@
             // textBoxNomeUser
             // 
             this.textBoxNomeUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNomeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNomeUser.Location = new System.Drawing.Point(37, 240);
+            this.textBoxNomeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNomeUser.Location = new System.Drawing.Point(38, 206);
             this.textBoxNomeUser.Name = "textBoxNomeUser";
-            this.textBoxNomeUser.Size = new System.Drawing.Size(421, 26);
+            this.textBoxNomeUser.Size = new System.Drawing.Size(421, 40);
             this.textBoxNomeUser.TabIndex = 2;
             // 
             // textBoxLoginUser
             // 
             this.textBoxLoginUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxLoginUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLoginUser.Location = new System.Drawing.Point(37, 350);
+            this.textBoxLoginUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLoginUser.Location = new System.Drawing.Point(38, 316);
             this.textBoxLoginUser.Name = "textBoxLoginUser";
-            this.textBoxLoginUser.Size = new System.Drawing.Size(421, 26);
+            this.textBoxLoginUser.Size = new System.Drawing.Size(421, 40);
             this.textBoxLoginUser.TabIndex = 4;
             // 
             // txtLogin
@@ -98,7 +98,7 @@
             this.txtLogin.BackColor = System.Drawing.Color.Thistle;
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.ForeColor = System.Drawing.Color.Purple;
-            this.txtLogin.Location = new System.Drawing.Point(33, 326);
+            this.txtLogin.Location = new System.Drawing.Point(34, 292);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(127, 21);
             this.txtLogin.TabIndex = 3;
@@ -107,11 +107,11 @@
             // textBoxSenhaUser
             // 
             this.textBoxSenhaUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSenhaUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSenhaUser.Location = new System.Drawing.Point(37, 467);
+            this.textBoxSenhaUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSenhaUser.Location = new System.Drawing.Point(38, 433);
             this.textBoxSenhaUser.Name = "textBoxSenhaUser";
             this.textBoxSenhaUser.PasswordChar = '*';
-            this.textBoxSenhaUser.Size = new System.Drawing.Size(421, 26);
+            this.textBoxSenhaUser.Size = new System.Drawing.Size(421, 40);
             this.textBoxSenhaUser.TabIndex = 6;
             // 
             // txtSenha
@@ -120,7 +120,7 @@
             this.txtSenha.BackColor = System.Drawing.Color.Thistle;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.Purple;
-            this.txtSenha.Location = new System.Drawing.Point(33, 444);
+            this.txtSenha.Location = new System.Drawing.Point(34, 410);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(61, 20);
             this.txtSenha.TabIndex = 5;
@@ -132,7 +132,7 @@
             this.txtTipo.BackColor = System.Drawing.Color.Thistle;
             this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipo.ForeColor = System.Drawing.Color.Purple;
-            this.txtTipo.Location = new System.Drawing.Point(33, 543);
+            this.txtTipo.Location = new System.Drawing.Point(34, 501);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(43, 20);
             this.txtTipo.TabIndex = 7;
@@ -141,25 +141,25 @@
             // comboBoxTipoUser
             // 
             this.comboBoxTipoUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTipoUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTipoUser.FormattingEnabled = true;
             this.comboBoxTipoUser.Items.AddRange(new object[] {
             "USER",
             "ADMIN"});
-            this.comboBoxTipoUser.Location = new System.Drawing.Point(37, 566);
+            this.comboBoxTipoUser.Location = new System.Drawing.Point(38, 524);
             this.comboBoxTipoUser.Name = "comboBoxTipoUser";
-            this.comboBoxTipoUser.Size = new System.Drawing.Size(421, 28);
+            this.comboBoxTipoUser.Size = new System.Drawing.Size(421, 41);
             this.comboBoxTipoUser.TabIndex = 8;
             // 
             // textBoxID
             // 
             this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxID.Enabled = false;
-            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(37, 160);
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(38, 126);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(166, 26);
+            this.textBoxID.Size = new System.Drawing.Size(166, 40);
             this.textBoxID.TabIndex = 10;
             // 
             // txtId
@@ -168,7 +168,7 @@
             this.txtId.BackColor = System.Drawing.Color.Thistle;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.Purple;
-            this.txtId.Location = new System.Drawing.Point(33, 134);
+            this.txtId.Location = new System.Drawing.Point(34, 100);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(28, 20);
             this.txtId.TabIndex = 11;
@@ -180,7 +180,7 @@
             this.usersGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InfoText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
@@ -188,7 +188,7 @@
             this.usersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.usersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.usersGrid.Location = new System.Drawing.Point(490, 146);
+            this.usersGrid.Location = new System.Drawing.Point(478, 160);
             this.usersGrid.MultiSelect = false;
             this.usersGrid.Name = "usersGrid";
             this.usersGrid.ReadOnly = true;
@@ -201,7 +201,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.usersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.usersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usersGrid.Size = new System.Drawing.Size(847, 561);
+            this.usersGrid.Size = new System.Drawing.Size(793, 512);
             this.usersGrid.TabIndex = 12;
             this.usersGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersGrid_CellClick);
             // 
@@ -211,7 +211,7 @@
             this.txtPesquisarFunc.BackColor = System.Drawing.Color.Thistle;
             this.txtPesquisarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisarFunc.ForeColor = System.Drawing.Color.Purple;
-            this.txtPesquisarFunc.Location = new System.Drawing.Point(486, 116);
+            this.txtPesquisarFunc.Location = new System.Drawing.Point(474, 126);
             this.txtPesquisarFunc.Name = "txtPesquisarFunc";
             this.txtPesquisarFunc.Size = new System.Drawing.Size(191, 20);
             this.txtPesquisarFunc.TabIndex = 14;
@@ -220,10 +220,10 @@
             // textBoxPesquisarFunc
             // 
             this.textBoxPesquisarFunc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxPesquisarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPesquisarFunc.Location = new System.Drawing.Point(705, 114);
+            this.textBoxPesquisarFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPesquisarFunc.Location = new System.Drawing.Point(671, 113);
             this.textBoxPesquisarFunc.Name = "textBoxPesquisarFunc";
-            this.textBoxPesquisarFunc.Size = new System.Drawing.Size(632, 26);
+            this.textBoxPesquisarFunc.Size = new System.Drawing.Size(600, 40);
             this.textBoxPesquisarFunc.TabIndex = 13;
             this.textBoxPesquisarFunc.TextChanged += new System.EventHandler(this.textBoxPesquisarFunc_TextChanged);
             // 
@@ -231,11 +231,11 @@
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.Teal;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCadastrar.Location = new System.Drawing.Point(37, 667);
+            this.btnCadastrar.Location = new System.Drawing.Point(38, 622);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(121, 40);
+            this.btnCadastrar.Size = new System.Drawing.Size(133, 50);
             this.btnCadastrar.TabIndex = 15;
             this.btnCadastrar.Tag = "";
             this.btnCadastrar.Text = "Cadastrar";
@@ -246,11 +246,11 @@
             // 
             this.btnAtualizar.BackColor = System.Drawing.Color.Tan;
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAtualizar.Location = new System.Drawing.Point(181, 667);
+            this.btnAtualizar.Location = new System.Drawing.Point(189, 622);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(124, 40);
+            this.btnAtualizar.Size = new System.Drawing.Size(133, 50);
             this.btnAtualizar.TabIndex = 16;
             this.btnAtualizar.Tag = "";
             this.btnAtualizar.Text = "Atualizar";
@@ -261,11 +261,11 @@
             // 
             this.btnDeletar.BackColor = System.Drawing.Color.Crimson;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeletar.Location = new System.Drawing.Point(328, 667);
+            this.btnDeletar.Location = new System.Drawing.Point(339, 622);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(130, 40);
+            this.btnDeletar.Size = new System.Drawing.Size(133, 50);
             this.btnDeletar.TabIndex = 17;
             this.btnDeletar.Tag = "";
             this.btnDeletar.Text = "Deletar";
@@ -286,9 +286,20 @@
             this.panel1.Size = new System.Drawing.Size(1366, 73);
             this.panel1.TabIndex = 37;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox2.Image = global::SistemaVendas.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(470, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkCyan;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1328, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -330,17 +341,6 @@
             this.label10.Size = new System.Drawing.Size(287, 64);
             this.label10.TabIndex = 21;
             this.label10.Text = "Caixa Livre";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pictureBox2.Image = global::SistemaVendas.Properties.Resources.logo;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(470, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 51;
-            this.pictureBox2.TabStop = false;
             // 
             // panel5
             // 
@@ -398,9 +398,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersGrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
