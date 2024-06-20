@@ -244,5 +244,26 @@
   <ItemGroup>
     <None Include="Resources\loja-de-roupa %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorias2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrinho-de-compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artigos-de-higiene.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferencia-de-dinheiro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

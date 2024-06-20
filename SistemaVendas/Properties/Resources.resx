@@ -118,40 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, Vetor De Moda, Vetor De Compras Imagem PNG e PSD Para Download Gratuito" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, Vetor De Moda, Vetor De Compras Imagem PNG e PSD Para Download Gratuito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loja-de-roupa (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loja-de-roupa (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2069440" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2069440.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="categorias2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categorias2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="categorias" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\categorias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="artigos-de-higiene" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artigos-de-higiene.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PDV-Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PDV-Azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="produtos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\produtos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="categorias (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categorias (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_frente_caixa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_frente_caixa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iniciarVenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iniciarVenda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="32223" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32223.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-fashion-clothing-feminine-purple-fashion-fictional-character" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-fashion-clothing-feminine-purple-fashion-fictional-character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loja-de-roupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loja-de-roupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2069440" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2069440.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loja-de-roupa (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loja-de-roupa (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="produtos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\produtos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loja-de-roupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loja-de-roupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="categorias" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categorias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iniciarVenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iniciarVenda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="categorias1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categorias1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-fashion-clothing-feminine-purple-fashion-fictional-character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-fashion-clothing-feminine-purple-fashion-fictional-character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="32223" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32223.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="categorias (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categorias (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carrinho-de-compras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carrinho-de-compras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PDV-Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PDV-Azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, Vetor De Moda, Vetor De Compras Imagem PNG e PSD Para Download Gratuito" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, Vetor De Moda, Vetor De Compras Imagem PNG e PSD Para Download Gratuito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transferencia-de-dinheiro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transferencia-de-dinheiro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

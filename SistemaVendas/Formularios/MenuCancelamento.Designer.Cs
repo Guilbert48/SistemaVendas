@@ -38,7 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(26, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(469, 33);
@@ -56,6 +56,7 @@
             // buttonCancelVend
             // 
             this.buttonCancelVend.BackColor = System.Drawing.Color.Crimson;
+            this.buttonCancelVend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancelVend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonCancelVend.Location = new System.Drawing.Point(53, 157);
             this.buttonCancelVend.Name = "buttonCancelVend";
@@ -68,6 +69,7 @@
             // buttonContinue
             // 
             this.buttonContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonContinue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonContinue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonContinue.Location = new System.Drawing.Point(291, 157);
             this.buttonContinue.Name = "buttonContinue";
@@ -81,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(531, 244);
             this.Controls.Add(this.buttonContinue);
             this.Controls.Add(this.buttonCancelVend);

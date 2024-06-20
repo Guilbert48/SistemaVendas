@@ -83,6 +83,26 @@ namespace SistemaVendas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap artigos_de_higiene {
+            get {
+                object obj = ResourceManager.GetObject("artigos-de-higiene", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carrinho_de_compras {
+            get {
+                object obj = ResourceManager.GetObject("carrinho-de-compras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cartoon_Desenho_Moda_Compras_Menina_Silhueta_PNG___Vetor_Dos_Desenhos_Animados__Vetor_De_Moda__Vetor_De_Compras_Imagem_PNG_e_PSD_Para_Download_Gratuito {
             get {
                 object obj = ResourceManager.GetObject("Cartoon Desenho Moda Compras Menina Silhueta PNG , Vetor Dos Desenhos Animados, V" +
@@ -97,6 +117,46 @@ namespace SistemaVendas.Properties {
         internal static System.Drawing.Bitmap categorias {
             get {
                 object obj = ResourceManager.GetObject("categorias", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap categorias__1_ {
+            get {
+                object obj = ResourceManager.GetObject("categorias (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap categorias__2_ {
+            get {
+                object obj = ResourceManager.GetObject("categorias (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap categorias1 {
+            get {
+                object obj = ResourceManager.GetObject("categorias1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap categorias2 {
+            get {
+                object obj = ResourceManager.GetObject("categorias2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -177,6 +237,16 @@ namespace SistemaVendas.Properties {
         internal static System.Drawing.Bitmap produtos {
             get {
                 object obj = ResourceManager.GetObject("produtos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transferencia_de_dinheiro {
+            get {
+                object obj = ResourceManager.GetObject("transferencia-de-dinheiro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
